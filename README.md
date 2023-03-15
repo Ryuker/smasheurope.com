@@ -1,1 +1,3 @@
-# smasheurope.com
+# smasheurope.com 
+
+splash page
