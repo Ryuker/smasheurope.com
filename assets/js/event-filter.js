@@ -2,9 +2,23 @@
 const itemFilter = document.getElementById('filter');
 const eventContainer = document.getElementById('events');
 
-// Promises
+////////////////////////////
+// Promise tests
 let events = [];
 let names = [];
+
+let test;
+let testNames;
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(document.getElementById('events'));
+  }, 300);
+});
+const promiseB = myPromise.then((response) => response.querySelectorAll('.card-title'));
+// const promiseC = promiseB.then((response) => response.forEach(item => 
+//   console.log(item.textContent.toLowerCase())
+// ));
 
 
 
@@ -97,7 +111,6 @@ async function setup() {
 
   console.log('setup completed');
 }
-
 
 
 // Attach Listeners
