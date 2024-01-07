@@ -17,10 +17,6 @@ function filterEvents(e) {
       // console.log('contains filter letters, show element');
       // console.log(name);
       const event = events.filter( item => normalizeString(item.textContent.toLowerCase()) === name)[0];
-      
-      // const clean = event.textContent.toLocaleLowerCase();
-
-      // console.log(clean.replace(/[u0300-\u036f]/g));
       showEvent(event);
     } else {
       // console.log('does not contain filter letter, hide element');
