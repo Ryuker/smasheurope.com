@@ -1,7 +1,8 @@
 // Event Filter
 const itemFilter = document.getElementById('filter');
 const events = Array.from(document.querySelectorAll('#events [data-event-title]'));
-const names = events.map(event => event.textContent.toLowerCase());
+const names = events.map(event => normalizeString(event.textContent.toLowerCase()));
+
 
 // Filter check - hides and displays elements based name check with 
 function filterEvents(e) {
@@ -15,12 +16,16 @@ function filterEvents(e) {
     if (name.indexOf(text) != -1 ) {
       // console.log('contains filter letters, show element');
       // console.log(name);
-      const event = events.filter( item => item.textContent.toLowerCase() === name)[0];
+      const event = events.filter( item => normalizeString(item.textContent.toLowerCase()) === name)[0];
+      
+      // const clean = event.textContent.toLocaleLowerCase();
+
+      // console.log(clean.replace(/[u0300-\u036f]/g));
       showEvent(event);
     } else {
       // console.log('does not contain filter letter, hide element');
       // console.log(name);
-      const event = events.filter( item => item.textContent.toLowerCase() === name)[0];
+      const event = events.filter( item => normalizeString(item.textContent.toLowerCase()) === name)[0];
       hideEvent(event);
     }
   });
@@ -37,3 +42,10 @@ function showEvent(event) {
 
 // Attach Listener
 itemFilter.addEventListener('input', filterEvents);
+
+//////////////////////
+// utils functions
+function normalizeString(str) {
+  const str_norm = str.normalize('NFD').replace(/\p{Diacritic}/gu, ""); 
+  return str_norm;
+}
