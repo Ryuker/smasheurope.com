@@ -7,3 +7,19 @@
 /* se-trailer responsiveness */
 .iframe-container { overflow: hidden;/* 16:9 aspect ratio */padding-top: 56.25%;position: relative;}
 .iframe-container iframe { border: 0;height: 100%;left: 0;position: absolute;top: 0;width: 100%;}
+
+.form-input-filter {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
