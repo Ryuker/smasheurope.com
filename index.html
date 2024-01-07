@@ -285,12 +285,24 @@
         </section>
         <section class="container mt-5">
             <div class="row d-flex justify-content-center my-4">
+                <div id="filter" class="filter">
+                    <input
+                    type="text"
+                    class="form-input-filter"
+                    id="filter"
+                    placeholder="Filter Events By Name"
+                    />
+                </div>
+            </div>
+        </section>
+        <section id="events" class="container mt-5">
+            <div class="row d-flex justify-content-center my-4">
                 <h1 class="card-title">Visit European Winter Majors</h1>
             </div>
             <div class="row">
                 <div class="container">
                     <div class="row gx-lg-2 d-flex flex-lg-row flex-wrap flex-column justify-content-between justify-content-lg-center">
-                        <div class="col-12 col-lg-5 card p-3 mr-lg-4">
+                        <div class="col-12 col-lg-5 card p-3 mr-lg-4" data-event>
                             <div class="card-body">
                                 <div class="row d-flex flex-column align-items-center">
                                     <h3 class="col-12 d-flex justify-content-center">Melee | Ultimate</h3>
@@ -314,7 +326,7 @@
                                             alt="Valhalla IV Banner" />
                                     </div>
                                     <div class="col-12 pt-2">
-                                        <h1 class="card-title">Valhalla IV</h1>
+                                        <h1 class="card-title" data-event-title>Valhalla IV</h1>
                                         <p class="text-justify text-muted card-text">
                                             By joining forces with PXB, Scandinavia's most exciting Smash tournament makes a return at the Nørrebrohalle with a 4 day event that offers Singles and Doubles competitions for Melee and Ultimate and various FGC side events. There's room for 512 players.
                                         </p>
@@ -335,7 +347,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-5 card p-3 mr-lg-4">
+                        <div class="col-12 col-lg-5 card p-3 mr-lg-4" data-event>
                             <div class="card-body">
                                 <div class="row d-flex flex-column align-items-center">
                                     <h3 class="col-12 d-flex justify-content-center">Ultimate</h3>
@@ -359,7 +371,7 @@
                                             alt="King Con Banner" />
                                     </div>
                                     <div class="col-12 pt-2">
-                                        <h1 class="card-title">King Con</h1>
+                                        <h1 class="card-title" data-event-title>King Con</h1>
                                         <p class="text-justify text-muted card-text">
                                             With 3 floors and a capacity for 1024 players King Con is looking to bring all of the biggest names in Europe under one roof for a one-of-a-kind experience that's never been seen before in partnership with Villette eSport Festival. 
                                             Competitions: 1 vs 1, 2 vs 2 and Squad Strike.
@@ -387,7 +399,7 @@
             <div class="row">
                 <div class="container">
                     <div class="row gx-lg-2 d-flex flex-lg-row flex-wrap flex-column justify-content-between justify-content-lg-center">
-                        <div class="col-12 col-lg-5 card p-3 mr-lg-4">
+                        <div class="col-12 col-lg-5 card p-3 mr-lg-4" data-event>
                             <div class="card-body">
                                 <div class="row d-flex flex-column align-items-center">
                                     <h3 class="col-12 d-flex justify-content-center">Ultimate</h3>
@@ -408,7 +420,7 @@
                                             alt="Regen 2024 Banner" />
                                     </div>
                                     <div class="col-12 pt-2">
-                                        <h1 class="card-title">Regen 2024</h1>
+                                        <h1 class="card-title" data-event-title>Regen 2024</h1>
                                         <p class="text-justify text-muted card-text">
                                             The Summertime main-event returns with an upgrade. A 3 day major hosted in Leicester, all Bo5 singles, a capacity of 1024, a line up of global top players in attendance and many social events.
                                         </p>
@@ -554,5 +566,6 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/script.min.js"></script>
+        <script src="assets/js/filter/event-filter.js"></script>
     </body>
 </html>
