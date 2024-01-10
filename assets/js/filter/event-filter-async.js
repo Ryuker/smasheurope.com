@@ -1,10 +1,24 @@
-// Event Filter
+// Event Filter Async
+// Author: Joeri 'Ryuker' van Ees - 10-01-2024 - https://joerivanees.com
+
 const itemFilter = document.getElementById('filter');
-const events = Array.from(document.querySelectorAll('#events [data-event-title]'));
-const names = events.map(event => normalizeString(event.textContent.toLowerCase()));
+const events = await getAllElementsByQuery('#events [data-event-title]')
+const names = events.map(e => normalizeString(e.textContent).toLowerCase());
+
+// Hide item filter until we've initialized it
+itemFilter.classList.add('hidden');
+
+// Only initialize filter after all events have been found
+await Promise.all([events]).then(() => init());
 
 
-// Filter check - hides and displays elements based name check with 
+// Initialize filter
+function init() {
+  itemFilter.classList.remove('hidden');
+  itemFilter.addEventListener('input', filterEvents);
+}
+
+// Filter Functionality
 function filterEvents(e) {
   if (events.length === 0) return; // there are no events in the array yet so no need to filter
 
@@ -27,6 +41,17 @@ function filterEvents(e) {
   });
 }
 
+// Query Functions returning a promise
+function getAllElementsByQuery(query) {
+  return new Promise((resolve, reject) => {
+    const elements = document.querySelectorAll(query);
+    resolve(elements);
+  })
+    .then(els => {
+      return Array.from(els);
+    });
+}
+
 // Styling functions
 function hideEvent(event) {
   event.closest('[data-event]').classList.add('hidden');
@@ -36,11 +61,9 @@ function showEvent(event) {
   event.closest('[data-event]').classList.remove('hidden');
 }
 
-// Attach Listener
-itemFilter.addEventListener('input', filterEvents);
-
 //////////////////////
 // utils functions
+// Convert special characters in string to alphabetical characters
 function normalizeString(str) {
   const str_norm = str.normalize('NFD').replace(/\p{Diacritic}/gu, ""); 
   return str_norm;
