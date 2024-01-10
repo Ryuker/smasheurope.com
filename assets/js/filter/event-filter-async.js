@@ -1,4 +1,6 @@
 // Event Filter Async
+// Author: Joeri 'Ryuker' van Ees - 10-01-2024 - https://joerivanees.com
+
 const itemFilter = document.getElementById('filter');
 const events = await getAllElementsByQuery('#events [data-event-title]')
 const names = events.map(e => normalizeString(e.textContent).toLowerCase());

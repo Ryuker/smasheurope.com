@@ -1,4 +1,6 @@
 // Event Filter
+// Author: Joeri 'Ryuker' van Ees - 10-01-2024 - https://joerivanees.com
+
 const itemFilter = document.getElementById('filter');
 const events = Array.from(document.querySelectorAll('#events [data-event-title]'));
 const names = events.map(event => normalizeString(event.textContent.toLowerCase()));
