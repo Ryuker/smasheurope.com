@@ -8,6 +8,12 @@
 .iframe-container { overflow: hidden;/* 16:9 aspect ratio */padding-top: 56.25%;position: relative;}
 .iframe-container iframe { border: 0;height: 100%;left: 0;position: absolute;top: 0;width: 100%;}
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-input-filter {
   margin-top: 20px;
   font-size: 18px;
