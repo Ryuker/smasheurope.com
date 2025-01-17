@@ -2,7 +2,7 @@
   "name": "smasheurope-com",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://ryuker.github.io/smasheurope-astrojs.com",
+  "homepage": "https://smasheurope.com",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
