@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+import Tooltip from './Tooltip.astro';
+const {
+  icon, 
+  text,
+  id,
+  tooltipText = '', 
+  classes = " ",
+  colors = 'bg-se-blue-100 hover:bg-se-blue-200', 
+} = Astro.props;
+
+---
+
+<button id={`btn-${id}`} aria-describedby="tooltip"
+  class={`${classes} ${colors} px-4 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`}>
+  {icon && <Icon name={icon} class="text-lg" /> }
+  {text && text}
+</button>
+
+{ tooltipText && 
+  <Tooltip text={tooltipText} buttonId={`btn-${id}`} />
+}

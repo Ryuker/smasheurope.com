@@ -1,0 +1,43 @@
+---
+import Footer from "@components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+import '@assets/styles/global-styles.css';
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4f46bf">
+		<link rel="shortcut icon" href="/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#4f46bf">
+		<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <Navbar />
+		<slot />
+    <Footer />
+	</body>
+</html>
+
+<style is:global>
+	body {
+		@apply bg-se-blue-50
+	}
+
+	p a, span a {
+		@apply text-se-link-200 hover:text-se-link-300
+	}
+</style>

@@ -1,0 +1,20 @@
+---
+import CardsFilter from "./CardsFilter.astro";
+import CountryCard from "./ui/CountryCard.astro";
+
+const { countries } = Astro.props;
+
+---
+<CardsFilter type="Countries" />
+
+<section id="communities" data-cards>
+  <div class="mx-auto w-full flex justify-center pt-5">
+    <div class="container">
+      <div class="flex justify-center gap-5 flex-wrap">
+        {countries.map(country => (
+          <CountryCard country={country} />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

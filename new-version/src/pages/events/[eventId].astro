@@ -1,0 +1,69 @@
+---
+import EventCard from "@components/ui/EventCard.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import getDateFormatted from "@utils/getDateFormatted.js";
+
+const { eventId } = Astro.params;
+
+export async function getStaticPaths(){
+  const inStaticMode = await import.meta.env.STATIC_MODE;
+  if (inStaticMode === "false"){
+    return [];
+  }
+  const api_endpoint = 'http://localhost:5000/api/events';
+  const uri = `${api_endpoint}`;
+  const response = await fetch(uri);
+  const eventsData = await response.json();
+
+  return eventsData.flatMap(event => {
+    return [
+      { params: { eventId: event.id }, props:{ event } }
+    ]
+  });
+}
+
+const { event: staticEvent } = Astro.props;
+let event;
+
+// we're in SSR mode, fetch data dynamically
+if (!staticEvent){
+  console.log('id:', eventId);
+  const api_url = new URL(`/api/events/${eventId}`, Astro.url);
+  const response = await fetch(api_url);
+
+  // redirect if we recieved a 404 error from api
+  if (response.status === 404) return Astro.redirect('/404', 404);
+
+  const data = await response.json();
+
+  event = data;
+
+  console.log('event:', event.title);
+}
+
+staticEvent ? event = staticEvent : '';
+
+// console.log(event);
+
+// Get the dates info and formatting
+const startDate = new Date(event.dates[0]);
+const endDate = new Date(event.dates[1]);
+
+const dates = {
+  startDate: getDateFormatted(startDate),
+  endDate: getDateFormatted(endDate),
+}
+
+// compile dates to a string for easy rendering
+const datesStr = `
+    ${dates.startDate.month} ${dates.startDate.day}${dates.startDate.suffix}-${dates.endDate.day}${dates.endDate.suffix}
+    ${dates.endDate.month !== dates.startDate.month ? dates.endDate.month : ''}`
+---
+
+<MainLayout title={eventId}>
+  <h1>Dynamic Events Page Displaying Upcoming Events for {event.title}</h1>
+  <EventCard event={event}></EventCard>
+  
+  <p> - data imported from an external api through astro's api endpoints</p>
+  <p> - displays events (needs a layout design)</p>
+</MainLayout>

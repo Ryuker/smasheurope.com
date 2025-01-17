@@ -1,0 +1,128 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "banner": "UFA2024/ufa_2024-banner.png",
+      "title": "Ultimate Fighting Arena 2024",
+      "games": "Utimate",
+      "description": "In the tailend of the summer one of the most prestigious fighting game majors in the world returns with singles, squadstrike and doubles competitions for Ultimate alongside many other game competitions.",
+      "dates": [
+        "2024-09-13T00:00:00.000Z",
+        "2024-09-15T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Aubervilliers",
+        "country": "France"
+      },
+      "details": "https://www.start.gg/tournament/regen-2024/details",
+      "slug": "regen-2025"
+    },
+    {
+      "id": "2",
+      "banner": "Sunrise2024/sunrise_2024-banner.png",
+      "title": "Sunrise 2024",
+      "games": "Ultimate",
+      "description": "Cicadas Gaming, the city of Hyères and the Espace Jeunesse, present to you, the return of Sunrise, bigger than ever with a capacity of for 512+ competitors and singles, doubles, squad strike and ladder competitons as well as several side events!",
+      "dates": [
+        "2024-10-26T00:00:00.000Z",
+        "2024-10-27T23:59:00.000Z"
+      ],   
+      "location": {
+        "municipality": "Hyères",
+        "country": "France"
+      },   
+      "details": "https://www.start.gg/sunrise-2024/",
+      "slug": "sunrise-2024"
+    },
+    {
+      "id": "3",
+      "banner": "SAPF/sapf-banner.png",
+      "title": "SAPF",
+      "games": "Melee",
+      "description": "The first German Melee major since Awakening 5, back in 2019, features top talent from Europe and beyond with competitions for Singles, Doubles and Crews in 800 m2 of space and over 60 setups for a capacity of 256 competitors.",
+      "dates": [
+        "2024-11-01T00:00:00.000Z",
+        "2024-11-03T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Hanover",
+        "country": "Germany"
+      },
+      "details": "https://www.start.gg/tournament/sapf",
+      "slug": "sapf"
+    },
+    {
+      "id": "4",
+      "banner": "GH2024/gh_2024-banner.jpg",
+      "title": "GameHotel 2024",
+      "games": "Ultimate",
+      "description": "The whole Hotel & Conference Center Sempachersee will morph into \"GameHotel\" to fill the whole GZI building (around 2000m²) with a FGC tournament feat. a capacity of 192 competitors for Smash Bros. Ultimate. There are singles and doubles competitions.",
+      "dates": [
+        "2024-11-02T00:00:00.000Z",
+        "2024-11-03T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Nottwil",
+        "country": "Switzerland"
+      },
+      "details": "https://www.start.gg/gamehotel-2024/",
+      "slug": "gamehotel-2024"
+    },
+    {
+      "id": "5",
+      "banner": "Tartarus2024/tartarus_2024-banner.jpg",
+      "title": "Tartarus",
+      "subtitle": "A Netrock Spikedown Major",
+      "games": "Ultimate",
+      "description": "Tartarus is a new major tournament series in Vienna in partnership with <a target=\"_blank\" href=\"https://challengersarena.com/\">VCA</a> held at the <a target=\"_blank\" href=\"https://viecc.com/en/\">Vienna Comic Con 2024</a> and promises a top-tier production. There's a capacity for 512 competitors and regular singles, doubles and ladder competitions.",
+      "dates": [
+        "2024-11-23T00:00:00.000Z",
+        "2024-11-24T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Vienna",
+        "country": "Austria"
+      },
+      "details": "https://start.gg/tartarus2024",
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/U7V9tovp_gE?si=Yjk44fe7US7tePo0",
+      "slug": "tartarus"
+    },
+    {
+      "id": "6",
+      "banner": "NTTT/nttt-banner-se-banner.png",
+      "title": "No Time To Tilt",
+      "games": "Ultimate",
+      "description": "A German Smash Bros. Ultimate major hosted in the <a target=\"_blank\" href=\"https://direct-book.com/properties/sleepbeeonedirect?locale=de&amp;promocode=NoTimeToTilt&amp;items[0][adults]=2&amp;items[0][children]=0&amp;items[0][infants]=0&amp;currency=EUR&amp;checkInDate=2024-11-23&amp;checkOutDate=2024-11-24&amp;trackPage=no\">SLEEP[BEE]ONE Hotel</a> in Mörfelden-Walldorf. There's capacity for 450 competitors and singles, doubles and ladder competitions. Accomodation can be booked at the hotel.",
+      "dates": [
+        "2024-11-23T00:00:00.000Z",
+        "2024-11-24T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Mörfelden-Walldorf",
+        "country": "Germany"
+      },
+      "municipality": "Leicester",
+      "country": "England",
+      "details": "https://www.start.gg/ntt",
+      "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"en\" dir=\"ltr\">GERMAN MELEE MAJORS ARE BACK!<br><br>We present SAPF, the first german melee major since Awakening 5 in 2019!<br><br>📅 01.-03.11.2024<br>👥 256 Cap<br>🗺️ Hanover, Germany<br><br>feat. <a href=\"https://twitter.com/NotAklo?ref_src=twsrc%5Etfw\">@NotAklo</a>, <a href=\"https://twitter.com/TrifSmash?ref_src=twsrc%5Etfw\">@TrifSmash</a>, <a href=\"https://twitter.com/zamu_ssbm?ref_src=twsrc%5Etfw\">@zamu_ssbm</a>, <a href=\"https://twitter.com/Pipsqueak_TV?ref_src=twsrc%5Etfw\">@Pipsqueak_TV</a>, <a href=\"https://twitter.com/FaustSSBM?ref_src=twsrc%5Etfw\">@FaustSSBM</a>, <a href=\"https://twitter.com/Solobattle_?ref_src=twsrc%5Etfw\">@Solobattle_</a>, <a href=\"https://twitter.com/upgamer_Nicki?ref_src=twsrc%5Etfw\">@upgamer_Nicki</a> and more!<br><br>SIGNUPS LIVE NOW! <a href=\"https://t.co/1OLPQ1v3Sv\">pic.twitter.com/1OLPQ1v3Sv</a></p>&mdash; German Melee (@German_Melee) <a href=\"https://twitter.com/German_Melee/status/1754145978318258511?ref_src=twsrc%5Etfw\">February 4, 2024</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+      "slug": "no-time-to-tilt"
+    },
+    {
+      "id": "7917",
+      "banner": "Regen2024/regen_2024-banner.jpg",
+      "title": "Regen 2025",
+      "games": "Ultimate | Melee | Brawl",
+      "description": "The Summertime blockbuster returns and aims to be the biggest Smash Bros. Ultimate event in UK history with a 3 day major hosted in the prestigious Athena Venue in Leicester feat. all Bo5 singles, a capacity of 1024, a line up of global top players in attendance and many social events.",
+      "dates": [
+        "2025-08-23T00:00:00.000Z",
+        "2025-08-25T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Leicester",
+        "country": "England"
+      },
+      "details": "https://www.start.gg/tournament/regen-2024/details",
+      "slug": "regen-2025"
+    }
+  ]
+}

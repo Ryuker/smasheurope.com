@@ -1,0 +1,66 @@
+---
+import { Icon } from 'astro-icon/components';
+import Tooltip from './Tooltip.astro';
+const {
+  target,
+  targetType,
+  icon, 
+  text,
+  id,
+  tooltipText = '', 
+  classes = " ",
+  colors = 'bg-se-blue-100 hover:bg-se-blue-200', 
+} = Astro.props;
+
+---
+<astro-toggle-button data-target={target} data-type={targetType} class="grow">
+  <button id={`btn-${id}`} aria-describedby="tooltip" 
+    class={`${classes} ${colors} px-2 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`}>
+    {icon && <Icon name={icon} class="text-lg"/> }
+    {text && text}
+  </button>
+
+  { tooltipText && 
+    <Tooltip text={tooltipText} buttonId={`btn-${id}`} />
+  }
+</astro-toggle-button>
+
+
+<script>
+  import { scrollToAttribute } from "@utils/utils";
+
+  class ToggleButton extends HTMLElement {
+    connectedCallback() {
+      const target = this.dataset.target;
+      const targetType = this.dataset.type;
+      const button = this.querySelector('button');
+
+      // console.log(targetType);
+
+      function toggleVisibility(target, targetType) {
+        const container = button?.closest(`[data-${targetType}-container]`);
+        if (container){
+          const targetEl = container.querySelector(`[data-${targetType}="${target}"]`);
+          targetEl?.classList.toggle('hidden');
+          targetEl?.classList.contains('hidden') ? '' : scrollToAttribute(container, `[data-${targetType}="${target}"]`);
+          button?.classList.toggle('active');
+        }
+      }
+
+      if (button) {
+        button.addEventListener('click', () => {
+          toggleVisibility(target, targetType);
+        });
+      }
+    }
+  }
+
+  customElements.define('astro-toggle-button', ToggleButton);
+  
+</script>
+
+<style>
+  .active {
+    @apply bg-se-blue-300 hover:bg-se-blue-400 text-white
+  }
+</style>

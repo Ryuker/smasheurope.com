@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+const { title, image, alt } = Astro.props;
+---
+<div class="flex justify-center bg-white mx-5 sm:mx-10 h-full rounded-lg p-8 shadow-md">
+  <div class="grid grid-cols-1 lg:grid-cols-4 lg:space-x-10">
+    <div class="flex items-center justify-center">
+      <Image src={image} alt={alt} class="flex lg:basis-full items-center py-2 object-none" />
+    </div>
+    <div class="col-span-3 space-y-2">
+      <span class="text-2xl text-se-dark font-bold">{title}</span>
+      <div class="text-se-muted text-m text-justify space-y-3">
+        <slot name="content"/>
+      </div>
+      <div class="flex basis-full py-3">
+        <slot name="buttons" />
+      </div>
+    </div>
+
+    
+    
+  </div>
+    
+</div>

@@ -1,0 +1,53 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import PastEventsList from "@components/PastEventsList.astro";
+import LinkButton from "@components/ui/LinkButton.astro";
+import EventsFilter from "@components/EventsFilter.astro";
+import Modal from "@components/ui/Modal.astro";
+
+---
+
+<MainLayout title="Past Events">
+  <section>
+		<div class="container mx-auto max-w-6xl my-10 space-y-8">
+			<div class="flex justify-center">
+
+				<div class="grid grid-cols-1">
+					<LinkButton icon="home" text="Back Home" url="/" colors="bg-se-blue-300 hover:bg-se-blue-400 text-white" classes="flex gap-2 items-center"/>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<EventsFilter />
+  <PastEventsList />
+  <section>
+		<div class="container mx-auto max-w-6xl my-10 space-y-8">
+			<div class="flex justify-center">
+
+				<div class="grid grid-cols-2 gap-5">
+					<LinkButton icon="arrow-left" text="Upcoming Majors" url="/events" colors="bg-se-blue-300 hover:bg-se-blue-400 text-white" classes="flex gap-2 items-center"/>
+					<Modal icon="calendar" title="European Tournament Calendar" 
+						dialogClasses="w-9/12" classes="justify-self-center w-full" btnClasses="h-full" 
+						buttonId={'events-calendar'} tooltipText={`European Tournament Calendar`}>
+            <main slot="main" class="block w-full h-full">
+              <div class="relative w-full h-full p-5 pt-0">
+                <iframe src="https://teamup.com/ksbsj1366v93kqovju?showLogo=0&showSearch=1&showProfileAndInfo=0&showSidepanel=1&showTitle=0&showMenu=1&showAgendaHeader=1&showAgendaDetails=0&showYearViewHeader=1" style="height: 70vh; width: 100%; overflow-x: hidden;" frameborder="0"></iframe>
+              </div>
+            </main>
+          </Modal>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container mx-auto max-w-6xl mt-20">
+			<div class="flex justify-center">
+
+				<div class="grid grid-cols-1">
+					<LinkButton icon="home" text="Back Home" url="/" classes="flex gap-2 items-center"/>
+				</div>
+			</div>
+		</div>
+	</section>
+</MainLayout>

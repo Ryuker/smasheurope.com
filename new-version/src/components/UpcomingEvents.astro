@@ -1,0 +1,49 @@
+---
+import EventCard from "./ui/EventCard.astro";
+
+const { limit } = Astro.props;
+
+const inStaticMode = await import.meta.env.STATIC_MODE;
+console.log('inStaticMode: ', inStaticMode);
+
+let api_url;
+
+inStaticMode === "true" ? api_url = new URL(`http://localhost:5000/api/events`): api_url = new URL(`/api/events`, Astro.url);
+
+const response = await fetch(api_url);
+const data = await response.json();
+
+const eventsData = data;
+
+const today = new Date();
+
+const upcomingEvents = eventsData.filter(event => {
+  return CheckIfInThePast(event) ? "" : event;
+});
+
+const events = upcomingEvents.slice(0, limit || eventsData.length);
+
+function CheckIfInThePast(event) {
+  const endDate = new Date(event.dates[1]);
+  return endDate < today ? true : false;
+}
+
+// function isUneven(index : Number){
+//   const result = index == events.length - 1 && (events.length % 2 == 0 ? false : true );
+//   return result;
+// }
+---
+
+<section id="events">
+  <h2 class="text-xl md:text-3xl font-bold text-se-dark my-10 text-center">
+    Upcoming Events
+  </h2>
+  <!-- <div class="m-auto grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl px-10"> -->
+  <!-- <div class="m-auto grid grid-cols-1 md:grid-cols-2 gap-8  px-10"> -->
+  <!-- <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl px-10"> -->
+  <div class="mx-auto flex flex-wrap gap-3 lg:gap-8 justify-center max-w-5xl px-5"> 
+    {events.map((event) => (
+      <EventCard key={event.id} event={event} />
+    ))}
+  </div>
+</section>

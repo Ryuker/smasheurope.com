@@ -1,0 +1,20 @@
+---
+const { type } = Astro.props;
+---
+
+<section class="mx-auto">
+  <div class="flex justify-center my-4">
+      <div id="filter" class="filter bg-transparent">
+          <input
+          type="text"
+          class="p-2 my-5 text-lg border-b-2 border-[#ccc] outline-none bg-transparent focus:text-se-dark"
+          id="filter"
+          placeholder=`Filter ${type} By Name`
+          />
+      </div>
+  </div>
+</section>
+
+<script>
+  import '@utils/cardFilterAsync.js';  
+</script>

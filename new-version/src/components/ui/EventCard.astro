@@ -1,0 +1,127 @@
+---
+import LinkButton from './LinkButton.astro';
+import EventImage from './EventImage.astro';
+import getDateFormatted from "@utils/getDateFormatted";
+import Modal from './Modal.astro';
+const { 
+  event, 
+  displayYear = false 
+} = Astro.props;
+
+// Get the dates info and formatting
+const startDate = new Date(event.dates[0]);
+const endDate = new Date(event.dates[1]);
+
+const dates = {
+  startDate: getDateFormatted(startDate),
+  endDate: getDateFormatted(endDate),
+}
+
+// compile dates to a string for easy rendering
+const datesStr = `
+    ${displayYear ? startDate.getFullYear() : ''}
+    ${dates.startDate.month} ${dates.startDate.day}${dates.startDate.suffix}
+    ${dates.endDate.day !== dates.startDate.day ? "- "+ dates.endDate.day + dates.endDate.suffix : ''}
+    ${dates.endDate.month !== dates.startDate.month ? dates.endDate.month : ''}`
+---
+<div class="min-h-[500px]">
+  <div class="bg-white h-full rounded-lg p-8 shadow-md w-full lg:w-[460px]" data-event>
+    <div class="flex min-h-full flex-col justify-start">
+      <span class="flex basis-full leading-none mb-3 items-center justify-center text-se-dark text-base font-semibold">
+        {event.games}
+      </span>
+      <div class="flex basis-full">
+        <EventImage imagePath=`${startDate.getFullYear()}/${event.banner}` alt=`${event.title} banner` />
+      </div>
+  
+      <div class="flex items-center py-2 leading-relaxed space-x-1" data-event-title>
+        <p class="align-middle text-xl md:text-2xl font-bold text-se-dark leading-relaxed whitespace-pre">
+          {event.title}
+        </p>
+        {event.subtitle &&
+          <div class="flex items-center text-sm space-x-2">
+            <span class="relative flex items-center h-full font-bold text-2xl align-middle leading-tight -top-1/8">:</span> 
+            <span class="relative flex align-middle text-base font-normal top-0.5">
+              {event.subtitle}
+            </span>
+          </div>
+        }
+      </div>
+      <div class="flex grow min-h-32">
+        <p set:html={event.description} class="text-se-muted text-m text-justify leading-relaxed" />
+      </div>
+      
+      <div class="flex basis-full py-3 text-sm">
+        <span class="text-se-dark">{datesStr}</span>
+        <span>{`, ${event.location.municipality}, ${event.location.country}`}</span>
+      </div>
+      
+      <div class="grid grid-cols-3 gap-3">
+        <div class="col-span-2 flex space-x-2">
+          {event.trailerUrl && 
+            <Modal icon="trailer" title={`${event.title} Trailer`} 
+              buttonId={event.slug} tooltipText={`Watch ${event.title} Trailer`}>
+              <main slot="main" class="flex basis-full w-full">
+                <div class="flex justify-center w-[800px]">
+                  <div class="video w-full h-full">
+                    <iframe src={event.trailerUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </main>
+            </Modal>
+          }
+  
+          {event.embedCode && 
+            <Modal icon="trailer" title={`${event.title} Trailer`}
+              buttonId={event.slug} tooltipText={`Watch ${event.title} Trailer`}>
+              <main slot="main" class="flex basis-full w-full">
+                <div class="flex justify-center w-[800px]">
+                  <div class="w-full flex justify-center">
+                    <p set:html={event.embedCode} class="text-se-muted text-m text-justify leading-relaxed" />
+                  </div>
+                </div>
+              </main>
+            </Modal>
+          }
+          
+          {event.details ? 
+            <LinkButton icon="tournament" url={event.details} newTab={true}
+            id={`${event.slug}-details`} tooltipText="Event Details" />
+  
+            : event.prevEventDetails && 
+            <LinkButton icon="tournament" url={event.prevEventDetails} newTab={true}
+            id={`${event.slug}-prevEventdetails`} tooltipText="Previous Event Details" />
+          }
+  
+          {event.extraVideos && event.extraVideos.map(video => (
+            video.embedCode ? 
+              <Modal icon="trailer" title={`${event.title} ${video.text}`}
+                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${event.title} ${video.text}`}>
+                <main slot="main" class="flex basis-full w-full">
+                  <div class="flex justify-center w-[800px]">
+                    <div class="w-full flex justify-center">
+                      <p set:html={video.embedCode} class="text-se-muted text-m text-justify leading-relaxed" />
+                    </div>
+                  </div>
+                </main>
+              </Modal>
+            : <Modal icon="trailer" title={`${event.title} ${video.text}`} 
+                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${event.title} ${video.text}`}>
+                <main slot="main" class="flex basis-full w-full">
+                  <div class="flex justify-center w-[800px]">
+                    <div class="video w-full h-full">
+                      <iframe src={video.url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </main>
+              </Modal>
+          ))}
+  
+        </div>
+        <!-- <LinkButton icon="info" url={`/events/${event.id}`} classes="justify-self-end"
+          id={`${event.slug}-info`} tooltipText="View Event Page"/> -->
+      </div>
+    </div>
+  </div>
+</div>
+

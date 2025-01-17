@@ -1,0 +1,56 @@
+---
+import LinkButton from "../LinkButton.astro";
+---
+
+<div id="containingEl" class="w-[500px] h-[200px] bg-red-300 flex justify-center items-center">
+  <button id="myBtn" class="hide w-[100px] h-[100px] bg-green-300">Something to change color</button>
+</div>
+
+
+<LinkButton icon="community" newTab={true} id="community" tooltipText="European Smash Communities"
+  url="https://docs.google.com/spreadsheets/d/11ElDfT0YmpIuiuApQ95lnoKM3b6BIe8MXmPyUfK4Sx8"
+/>
+
+<style is:global>
+
+  #myBtn {
+    position: absolute;
+    opacity: 0;
+  }
+
+  #myBtn.hide {
+    transition: opacity 2s;
+    animation: fade-out 2s forwards;
+    opacity: 0;
+  }
+
+  #myBtn.show {
+    animation: fade-in 2s forwards;
+  }
+</style>
+
+<script>
+  const containingEl = document.querySelector('#containingEl');
+  const myBtn = document.querySelector('#myBtn');
+
+  function showTooltip() {
+    console.log('show');
+      myBtn.classList.remove('hide');
+      myBtn.classList.add('show');
+    }
+
+    function hideTooltip() {
+      console.log('hide');
+      myBtn.classList.remove('show');
+      myBtn.classList.add('hide');
+    }
+
+  [
+    ['mouseenter', showTooltip],
+    ['mouseleave', hideTooltip],
+    ['focus', showTooltip],
+    ['blur', hideTooltip],
+  ].forEach(([event, listener]) => {
+    containingEl.addEventListener(event, listener);
+  });
+</script>

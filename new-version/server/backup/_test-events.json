@@ -1,0 +1,55 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "banner": "UFA2024/ufa_2024-banner.png",
+      "title": "Ultimate Fighting Arena 2024",
+      "games": "Utimate",
+      "description": "In the tailend of the summer one of the most prestigious fighting game majors in the world returns with singles, squadstrike and doubles competitions for Ultimate alongside many other game competitions.",
+      "dates": [
+        "2024-09-13T00:00:00.000Z",
+        "2024-09-15T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Aubervilliers",
+        "country": "France"
+      },
+      "details": "https://www.start.gg/tournament/regen-2024/details",
+      "slug": "regen-2025"
+    },
+    {
+      "id": "2",
+      "banner": "Sunrise2024/sunrise_2024-banner.png",
+      "title": "Sunrise 2024",
+      "games": "Ultimate",
+      "description": "Cicadas Gaming, the city of Hyères and the Espace Jeunesse, present to you, the return of Sunrise, bigger than ever with a capacity of for 512+ competitors and singles, doubles, squad strike and ladder competitons as well as several side events!",
+      "dates": [
+        "2024-10-26T00:00:00.000Z",
+        "2024-10-27T23:59:00.000Z"
+      ],   
+      "location": {
+        "municipality": "Hyères",
+        "country": "France"
+      },   
+      "details": "https://www.start.gg/sunrise-2024/",
+      "slug": "sunrise-2024"
+    },
+    {
+      "id": "3",
+      "banner": "SAPF/sapf-banner.png",
+      "title": "SAPF",
+      "games": "Melee",
+      "description": "The first German Melee major since Awakening 5, back in 2019, features top talent from Europe and beyond with competitions for Singles, Doubles and Crews in 800 m2 of space and over 60 setups for a capacity of 256 competitors.",
+      "dates": [
+        "2024-11-01T00:00:00.000Z",
+        "2024-11-03T23:59:00.000Z"
+      ],
+      "location": {
+        "municipality": "Hanover",
+        "country": "Germany"
+      },
+      "details": "https://www.start.gg/tournament/sapf",
+      "slug": "sapf"
+    }
+  ]
+}

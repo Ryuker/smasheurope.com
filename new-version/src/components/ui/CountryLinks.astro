@@ -1,0 +1,56 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+const { country, game, gameName, classes, gameId } = Astro.props;
+
+function exists(type: string) {
+  return game.links.some( link => link.type === type ) ? true : false ;
+}
+
+function getLinkByType(type: string) {
+  return game.links.find( link => link.type === type );
+}
+
+---
+<div class=`${classes ? classes + ' ': ''}mt-10` data-game={gameId}>
+  <div >{gameName}</div>
+  <div class="flex gap-3 justify-center">
+    <div class="flex w-full justify-between gap-5 pt-2 flex-wrap">
+      { exists('website') && 
+        <LinkButton icon="globe" newTab={true} id=`${country.flag}-${game.name}-website` tooltipText="Website" classes="basis-full"
+          url={getLinkByType('website').url}
+        />
+      }
+      { exists('discord') && 
+        <LinkButton icon="discord" newTab={true} id=`${country.flag}-${game.name}-discord` tooltipText="Discord" classes="flex-1"
+          url={getLinkByType('discord').url}
+        />
+      }
+      { exists('x') && 
+        <LinkButton icon="x" newTab={true} id=`${country.flag}-${game.name}-x` tooltipText="X" classes="flex-1"
+          url={getLinkByType('x').url}
+        />
+      }
+      { exists('bs') && 
+        <LinkButton icon="bs" newTab={true} id=`${country.flag}-${game.name}-bs` tooltipText="BlueSky" classes="flex-1"
+          url={getLinkByType('bs').url}
+        />
+      }
+      { exists('fb') && 
+        <LinkButton icon="fb" newTab={true} id=`${country.flag}-${game.name}-fb` tooltipText="Facebook" classes="flex-1"
+          url={getLinkByType('fb').url}
+        />
+      }
+      { exists('yt') && 
+        <LinkButton icon="yt" newTab={true} id=`${country.flag}-${game.name}-yt` tooltipText="Youtube" classes="flex-1"
+          url={getLinkByType('yt').url}
+        />
+      }
+      { exists('twitch') && 
+        <LinkButton icon="twitch" newTab={true} id=`${country.flag}-${game.name}-twitch` tooltipText="Twitch" classes="flex-1"
+          url={getLinkByType('twitch').url}
+        />
+      }
+    </div>
+  </div>  
+</div>

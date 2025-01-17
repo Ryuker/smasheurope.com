@@ -1,0 +1,76 @@
+---
+import InitiativeCard from "./ui/InitiativeCard.astro"
+import LinkButton from './ui/LinkButton.astro';
+
+// images
+import SameSticker from '@assets/images/global/same-sticker.png';
+import ESCLogo from '@assets/images/global/esc2015-logo.png';
+import Modal from './ui/Modal.astro';
+---
+
+<section>
+  <h2 class="text-xl md:text-3xl font-bold text-se-dark my-10 text-center ">
+    Past joined community initiatives
+  </h2>
+  <div class="mx-auto grid grid-cols-1 gap-8 max-w-6xl">
+    <InitiativeCard title="The S.A.M.E Circuit 2021" image={SameSticker} alt="S.A.M.E Logo">
+      <Fragment slot="content">
+        <p>
+          Times had changed but we were <br> <span class="text-se-dark">S</span>
+          till.&nbsp;<span class="text-se-dark">A</span>
+          rranging. <span class="text-se-dark">M</span>
+          elee. <span class="text-se-dark">E</span>
+          vents.
+      </p>
+
+        <p>In 2021 a collective of 11 premier European TO teams joined forces under the S.A.M.E Circuit to give an online taste of some the best that European Melee could still offer (under the COVID-19 pandemic regulations). The circuit consisted of 9 online major qualifier events each offering Singles, Teams and International Crews. Competitors earned points in order to qualify for the circuit Finale where coveted prizes could be earned.
+        
+        <p>S.A.M.E circuit partnered with <a target="_blank" href="https://beyondthesummit.tv/">Beyond The Summit</a> and was streamed entirely on their <a target="_blank" href="https://twitch.tv/btssmash">Twitch Channel</a>. In return funds were given to production and two invites to Smash Summits could be earned. Additional partners included Kone's Academy which offered free coaching trials to placement in the amateur brackets, <a target="_blank" href="https://metafy.gg/">Metafy</a> which offered a prizepool for the Finale and <a target="_blank" href="https://poilon.com/">Poilon Software</a> which provided the circuit ranking website.</p>
+      </Fragment>
+      <Fragment slot="buttons">
+        <div class="flex md:space-x-4 flex-wrap w-full gap-3 md:gap-0 justify-between">
+          <!-- <Button icon="trailer" classes="basis-[36%] md:basis-auto md:grow"/> -->
+          <Modal icon="trailer" title="S.A.M.E Circuit 2021 Trailer" classes="basis-[36%] md:basis-auto md:grow"
+            buttonId={'same-trailer'} tooltipText={`Watch Trailer`}>
+            <main slot="main" class="flex basis-full w-full">
+              <div class="flex justify-center w-[800px]">
+                <div class="video w-full h-full">
+                  <iframe src="https://www.youtube-nocookie.com/embed/pCGLUPCRxuY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+              </div>
+            </main>
+          </Modal>
+          <LinkButton icon="tournament" url="https://smash.gg/SAMEcircuit" newTab={true} classes="basis-[20 md:basis-auto grow" id="same-details" tooltipText="Circuit Details" />
+          <LinkButton icon="discord" url="https://discord.gg/zBr4Ce33mC" newTab={true} classes="basis-[36%] md:basis-auto md:grow" id="same-discord" tooltipText="Discord" />
+          <LinkButton icon="trophy" url="https://www.start.gg/tournament/same-finale-2021/details" newTab={true} classes="basis-[48%] md:basis-auto grow" id="same-finale" tooltipText="Finale" />
+          <LinkButton icon="heart" url="https://youtu.be/fmBuDu3YlD4" newTab={true} classes="basis-[48%] md:basis-auto grow" 
+            id="same-credits" tooltipText="Credits Compilation" />
+        </div>
+      </Fragment>
+    </InitiativeCard>
+
+    <InitiativeCard title="The European Smash Circuit 2015" image={ESCLogo} alt="European Smash Circuit Logo" >
+      <Fragment slot="content">
+        <p>The European Smash Circuit 2015 was a tournament circuit consisting of seven European tournaments: HFLAN Melee Edition, Heir II the Throne, Helix, Avalon M, Eclipse, Òssom Fights 2015, and B.E.A.S.T 6.</p>
+
+        <p>The circuit featured a points-based ranking system based on performance in each tournament. Fifteen percent of the prize pool from each tournament went toward a final prize pool, which was paid out to the top 3 points earners.</p>
+      </Fragment>
+      <Fragment slot="buttons">
+        <div class="flex space-x-4 w-full">
+          <Modal icon="trailer" title="European Smash Circuit Trailer" 
+            classes="min-w-28 basis-1/2 md:basis-auto"
+            buttonId={'esc-trailer'} tooltipText={`Watch Trailer`}>
+            <main slot="main" class="flex basis-full w-full">
+              <div class="flex justify-center w-[800px]">
+                <div class="video w-full h-full">
+                  <iframe src="https://www.youtube-nocookie.com/embed/N-8vc0yOSkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+              </div>
+            </main>
+          </Modal>
+          <LinkButton icon="info" url="https://liquipedia.net/smash/European_Smash_Circuit_2015" newTab={true} classes="min-w-28 basis-1/2 md:basis-auto" id="esc-details" tooltipText="Circuit Details" />
+        </div>
+      </Fragment>
+    </InitiativeCard>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+// layouts
+import MainLayout from "@layouts/MainLayout.astro";
+import RepeatedLayout from "@layouts/RepeatedLayout.astro";
+// components
+import Hero from "@components/Hero.astro";
+import EventsFilter from "@components/EventsFilter.astro";
+import UpcomingEvents from "@components/UpcomingEvents.astro";
+import LinkButton from "@components/ui/LinkButton.astro";
+import Modal from "@components/ui/Modal.astro";
+
+import { Image } from 'astro:assets';
+import logo from "@assets/images/global/se-logo.png";
+
+
+---
+
+<MainLayout title="smasheurope.com">
+ 	
+	<Hero title="Welcome to SmashEurope!">
+		<p>Here you can find your local European Smash community and an overview of events to compete in.</p>
+		<p>You're encouraged to follow our social accounts to stay in the loop of developments in the scene.</p>
+			
+		<p>The European Smash community has been active for over two decades. It's made up of a grassroots scene fragmented into various communities. SmashEurope was launched in January of 2015 as central hub into this community.</p>
+
+		<p>Best of luck on your Smash journey!</p>
+
+		<p class="text-se-dark">—The SmashEurope Development Team</p>
+	</Hero>
+	<EventsFilter />
+	<UpcomingEvents limit="4"/>
+	<section>
+		<div class="container mx-auto max-w-6xl my-10 space-y-8">
+			<div class="flex justify-center px-5">
+
+				<div class="grid grid-cols-3">
+					<LinkButton icon="more" text="More Events" url="/events" colors="bg-se-blue-300 hover:bg-se-blue-400 text-white" 
+						classes="flex gap-2 items-center" id="events-more" tooltipText="View Featured Events Page"/>
+					<Modal icon="calendar" title="European Tournament Calendar" 
+						dialogClasses="w-9/12" classes="justify-self-center" btnClasses="h-full" 
+						buttonId={'events-calendar'} tooltipText={`European Tournament Calendar`}>
+            <main slot="main" class="block w-full h-full">
+              <div class="relative w-full h-full p-5 pt-0">
+                <iframe src="https://teamup.com/ksbsj1366v93kqovju?showLogo=0&showSearch=1&showProfileAndInfo=0&showSidepanel=1&showTitle=0&showMenu=1&showAgendaHeader=1&showAgendaDetails=0&showYearViewHeader=1" style="height: 70vh; width: 100%; overflow-x: hidden;" frameborder="0"></iframe>
+              </div>
+              
+            </main>
+          </Modal>
+					<LinkButton icon="history" text="Past Events" url="/events/past-events" classes="flex gap-2 items-center" 
+						id="events-past" tooltipText="See Past Featured Events" />
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<RepeatedLayout />
+</MainLayout>
+

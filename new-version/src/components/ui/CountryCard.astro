@@ -1,0 +1,147 @@
+---
+import Button from "./Button.astro";
+import CountryLinks from "./CountryLinks.astro";
+import LinkButton from "./LinkButton.astro";
+import ToggleButton from "./ToggleButton.astro";
+
+const { country } = Astro.props;
+
+const { links, games }  = country;
+
+function exists(type: string) {
+  return links.some( link => link.type === type ) ? true : false ;
+}
+
+function getLinkByType(type: string) {
+  return links.find( link => link.type === type );
+}
+
+function gameExists(name: string) {
+  // console.log('gameExists', name, country.name, games.some( game => game.name === name));
+  return games.some( game => game.name === name) ? true : false;
+}
+
+function getGameByName(name: string) {
+  return games.find( game => game.name === name );
+}
+---
+
+<div class="min-h-[500px] px-5 sm:px-5 md:p-0" data-card>
+  <div class="bg-white rounded-lg shadow-md w-full sm:w-full lg:w-[460px]">
+    <div class="flex justify-between mb-5">
+      <div class="flex items-center text-2xl text-se-dark capitalize flex-1 pl-5 border-b-2 border-gray-300">
+        <span data-card-title>{country.name}</span>
+      </div>
+      <div class="h-20 w-20">
+        <div class=`fib fi-${country.flag} fis block w-full h-full p-0 rounded-tr-lg`></div>
+      </div>
+    </div>
+
+    <!-- Overarching Social Media -->
+    <div class="flex min-h-full flex-col justify-start p-4 md:p-8 pt-0">
+      { country.links && 
+        <div class="font-semibold text-center mb-3">Country Wide Community</div>
+          <div class="text-center mb-5 border-2 rounded-lg border-se-blue-200">
+            <div class="flex justify-center gap-4 flex-wrap p-4">
+              { (exists('website') || exists('discord')) && 
+                <div class="flex w-full justify-between gap-5 pt-2">
+                  { exists('website') && 
+                    <LinkButton icon="globe" newTab={true} id=`${country.flag}-website` tooltipText="Website" classes="flex-1 grow"
+                      url={getLinkByType('website').url}
+                    />
+                  } 
+                  { exists('discord') && 
+                    <LinkButton icon="discord" newTab={true} id=`${country.flag}-discord` tooltipText="Discord" classes="flex-1 shrink"
+                    url={getLinkByType('discord').url}
+                    />
+                  }
+                </div>
+              }
+              
+              { exists('x') && 
+                <LinkButton icon="x" newTab={true} id=`${country.flag}-x` tooltipText="X" classes="flex-1"
+                  url={getLinkByType('x').url}
+                />
+              }
+              { exists('bs') && 
+                <LinkButton icon="bs" newTab={true} id=`${country.flag}-bs` tooltipText="BlueSky" classes="flex-1"
+                  url={getLinkByType('bs').url}
+                />
+              }
+              { exists('fb') && 
+                <LinkButton icon="fb" newTab={true} id=`${country.flag}-fb` tooltipText="Facebook" classes="flex-1"
+                  url={getLinkByType('fb').url}
+                />
+              }
+              { exists('instagram') && 
+                <LinkButton icon="instagram" newTab={true} id=`${country.flag}-instagram` tooltipText="Instagram" classes="flex-1"
+                  url={getLinkByType('instagram').url}
+                />
+              }
+              {(exists('twitch') || exists('yt')) && 
+                <div class="flex w-full justify-between gap-5">
+                  { exists('twitch') && 
+                  <LinkButton icon="twitch" newTab={true} id=`${country.flag}-twitch` tooltipText="Twitch" classes="flex-1"
+                    url={getLinkByType('twitch').url}
+                    />
+                  } 
+                  { exists('yt') && 
+                    <LinkButton icon="yt" newTab={true} id=`${country.flag}-yt` tooltipText="Youtube" classes="flex-1"
+                      url={getLinkByType('yt').url}
+                    />
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+      <!-- Discors and Socials -->
+      { country.games && 
+        <div class="font-semibold text-center mb-3">Game Specific Communities</div>
+        <div class="text-center border-2 rounded-lg border-se-blue-200 p-2 md:p-4" data-game-container>
+          <div class="flex justify-center flex-wrap gap-2 md:gap-5">
+            { gameExists('ultimate') && 
+              <ToggleButton id=`${country.flag}-ultimate` text="Ultimate" classes="w-full" target="ultimate" targetType="game"/>
+            }
+            { gameExists('wii-u') && 
+              <ToggleButton id=`${country.flag}-wii-u` text="Wii-U / 3DS" classes="w-full" target="wii-u" targetType="game"/>
+            }
+            { gameExists('melee') && 
+              <ToggleButton id=`${country.flag}-melee` text="Melee" classes="w-full" target="melee" targetType="game"/>
+            } 
+            { gameExists('project-plus') && 
+              <ToggleButton id=`${country.flag}-project-plus` text="Project M/+" classes="w-full" target="project-plus" targetType="game"/>
+            }
+            { gameExists('brawl') && 
+              <ToggleButton id=`${country.flag}-brawl` text="Brawl" classes="w-full" target="brawl" targetType="game"/>
+            }
+            { gameExists('smash-64') && 
+              <ToggleButton id=`${country.flag}-smash-64` text="Smash 64" classes="w-full" target="smash-64" targetType="game"/>
+            }
+          </div>
+          <div class="flex flex-col">
+            { gameExists('ultimate') && 
+              <CountryLinks country={country} game={getGameByName('ultimate')} gameName="Smash Bros.Ultimate" gameId="ultimate" classes="hidden" />
+            }
+            { gameExists('wii-u') && 
+              <CountryLinks country={country} game={getGameByName('wii-u')} gameName="Smash Bros. for Wii U / 3DS" gameId="wii-u" classes="hidden" />
+            }
+            { gameExists('melee') && 
+              <CountryLinks country={country} game={getGameByName('melee')} gameName="Smash Bros. Melee" gameId="melee" classes="hidden" />
+            }
+            { gameExists('project-plus') && 
+              <CountryLinks country={country} game={getGameByName('project-plus')} gameName="Project M/+" gameId="project-plus" classes="hidden" />
+            }
+            { gameExists('brawl') && 
+              <CountryLinks country={country} game={getGameByName('brawl')} gameName="Smash Bros. Brawl" gameId="brawl" classes="hidden" />
+            }
+            { gameExists('smash-64') && 
+              <CountryLinks country={country} game={getGameByName('smash-64')} gameName="Smash Bros. 64" gameId="smash-64" classes="hidden" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

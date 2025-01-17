@@ -1,0 +1,179 @@
+---
+import { Icon } from 'astro-icon/components';
+import Tooltip from './Tooltip.astro';
+const {
+  openText,
+  title,
+  icon, 
+  buttonId,
+  tooltipText = '',
+  btnClasses = " ",
+  dialogClasses = " ",
+  classes = " ",
+  colors = 'bg-se-blue-100 hover:bg-se-blue-200', 
+} = Astro.props;
+---
+<astro-modal class={`${classes}`}>
+  <button id={`btn-${buttonId}`} aria-describedby="tooltip" 
+    class={`${btnClasses} ${colors} w-full md:w-inherit px-4 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`}>
+    {icon && <Icon name={icon} class="text-lg" /> }
+    {openText && openText}
+  </button>
+
+  { tooltipText && 
+    <Tooltip text={tooltipText} buttonId={`btn-${buttonId}`} />
+  }
+  
+  <dialog class={`${dialogClasses + " "}rounded-lg p-0`} autofocus>
+    <div class="flex flex-col flex-1">
+      <div class="flex border-b py-4 pl-5 pr-0 justify-between">
+        <div class="flex items-center text-sm font-semibold">{title}</div>
+        <button id="closeBtn" class="px-3 font-bold text-se-muted hover:text-se-blue-300 flex items-center focus:outline-1 focus:outline-blue-400 [&:not(:hover)]:focus-visible:text-blue-400">
+          <Icon name="close" class="text-3xl" />
+        </button>
+      </div>
+      <div id="content" class="flex basis-full justify-center">
+        <slot name="main" />
+      </div>
+    </div>
+  </dialog>
+</astro-modal>
+
+
+<script>
+  class Modal extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('button');
+      const dialog = this.querySelector('dialog');
+      const closeButton = this.querySelector('#closeBtn');
+      const content = this.querySelector('#content');
+
+      function closeDialog () {
+        // set classes to begin closing of the dialog, the dialog is closed when the animation has ended
+        if (dialog){
+          dialog.classList.add('closing');
+          document.body.classList.remove('lock-scroll');
+        }
+      }
+      
+      if (dialog && content && closeButton) {
+
+        // closes the dialog after the fade-out animation has ended
+        dialog.addEventListener('animationend', (e) => {
+          if (e.animationName === 'fade-out'){
+            dialog.classList.remove('closing');
+            dialog.close();
+          }
+        })
+
+        dialog.addEventListener('click', event => {
+          if (event.target === dialog) {
+            closeDialog();
+          }
+        });
+
+
+        closeButton.addEventListener('click', () => {
+          closeDialog();
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') { //if esc key was not pressed in combination with ctrl or alt or shift
+            const isNotCombinedKey = !(event.ctrlKey || event.altKey || event.shiftKey);
+            if (isNotCombinedKey) {
+              if (dialog.hasAttribute('open'))
+                event.preventDefault();
+                closeDialog();
+            }
+          }
+        });
+
+        // handle the closing of dialog after close() has been called
+        dialog.addEventListener('close', () => {
+          document.body.classList.remove('lock-scroll');
+
+          // stop trailers from playing 
+          const memory = content.innerHTML;
+          
+          // pause for 1s and then refresh innerhtml
+          setTimeout(() => {
+            content.innerHTML = memory;
+          }, 500);
+        })
+      }
+      
+      // Opens the dialog
+      if (button) {
+        button?.addEventListener('click', () => {
+          if (dialog) {
+            dialog.showModal();
+            document.body.classList.add('lock-scroll');
+          }
+        });
+      }
+    }
+  }
+
+  customElements.define('astro-modal', Modal);
+</script>
+
+<style is:global>
+
+  astro-modal dialog {
+    pointer-events: none;
+    transform: translate(0, -150px);
+    z-index: 9999;
+
+    &[open] {
+      pointer-events: all;
+      animation: fade-in 0.2s forwards, slide-in 0.3s forwards 0.1s;
+    }
+  }
+
+  astro-modal dialog[open].closing {
+    transform: translate(0, -150px);
+    pointer-events: none;
+
+    transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 1s;
+      
+    animation: slide-out 0.2s forwards, fade-out 0.3s forwards 0.1s;
+  }
+
+  astro-modal dialog[open].closing::backdrop {
+    background: rgba(62, 72, 103, 0.5);
+    pointer-events: none;
+
+    transition: opacity 1s;
+    
+    animation: fade-out 0.5s forwards;
+  } 
+
+  astro-modal dialog[open]::backdrop {
+    background: rgba(62, 72, 103, 0.5);
+    animation: fade-in 0.5s forwards;
+  }
+
+  .lock-scroll {
+    overflow: hidden;
+  }
+
+  /* iframe{bottom:0;border-radius:0 0 .375rem .375rem;height:100%;left:0;position:absolute;right:0;top:0;width:100%} */
+
+  .video {
+    width:100%;
+    padding-top:56.25%; 
+    position:relative;
+  }
+
+  .video iframe {
+    bottom:0;
+    border-radius:0 0 .375rem .375rem;
+    height:100%;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%
+  }
+
+</style>
