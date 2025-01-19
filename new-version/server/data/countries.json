@@ -910,6 +910,10 @@
           "name": "ultimate",
           "links": [
             {
+              "type": "website",
+              "url": "https://www.swisssmash.ch"
+            },
+            {
               "type": "discord",
               "url": "https://discord.gg/YhgSjFn"
             },
@@ -919,7 +923,7 @@
             },
             {
               "type": "x",
-              "url": "https://twitter.com/SmashLietuva"
+              "url": "https://twitter.com/swiss_smash"
             }
           ]
         },
