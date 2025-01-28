@@ -5,7 +5,7 @@
   "homepage": "https://smasheurope.com",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --cname smasheurope.com",
+    "deploy": "gh-pages -d dist --cname www.smasheurope.com",
     "help": "gh-pages --help",
     "dev": "astro dev",
     "start": "astro dev",
