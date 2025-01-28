@@ -131,16 +131,16 @@
       "flag": "dk",
       "links": [
         {
-          "type": "website",
-          "url": "http://www.smashbros.dk/"
-        },
-        {
           "type": "discord",
           "url": "https://discord.gg/cbSQX6f"
         },
         {
           "type": "fb",
-          "url": "https://www.facebook.com/groups/1397200900559117/?ref=bookmarks"
+          "url": "https://www.facebook.com/groups/1397200900559117"
+        },
+        {
+          "type": "x",
+          "url": "https://x.com/Smash_Denmark"
         }
       ],
       "games": [
@@ -154,10 +154,6 @@
             {
               "type": "fb",
               "url": "https://www.facebook.com/groups/1397200900559117"
-            },
-            {
-              "type": "x",
-              "url": "https://twitter.com/SmashBrosCyprus"
             }
           ]
         }
@@ -195,8 +191,54 @@
       ]
     },
     {
-      "name": "France",
+      "name": "Hungary",
       "id": "6",
+      "flag": "hu",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/DudGK69UBg"
+        },
+        {
+          "type": "x",
+          "url": "https://x.com/smash_hun_ZF"
+        },
+        {
+          "type": "fb",
+          "url": "https://www.facebook.com/smashmagyarorszag/"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/smash_hun_zf/"
+        },
+        {
+          "type": "yt",
+          "url": "https://www.youtube.com/channel/UCGPl6vhpeIBQVbaoUfLTy_A"
+        }
+      ]
+    },
+    {
+      "name": "Iceland",
+      "id": "7",
+      "flag": "is",
+      "links": [
+        {
+          "type": "website",
+          "url": "https://www.smashiceland.com/"
+        },
+        {
+          "type": "discord",
+          "url": "https://discord.gg/3FEgRJfreP"
+        },
+        {
+          "type": "x",
+          "url": "https://x.com/ZonersParadise"
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "id": "8",
       "flag": "fr",
       "games": [
         {
@@ -279,7 +321,7 @@
     },
     {
       "name": "Germany",
-      "id": "7",
+      "id": "9",
       "flag": "de",
       "games": [
         {
@@ -342,7 +384,7 @@
     },
     {
       "name": "Greece",
-      "id": "8",
+      "id": "10",
       "flag": "gr",
       "games": [
         {
@@ -391,7 +433,7 @@
     },
     {
       "name": "Ireland",
-      "id": "9",
+      "id": "11",
       "flag": "ie",
       "links": [
         {
@@ -429,7 +471,7 @@
     },
     {
       "name": "Italy",
-      "id": "10",
+      "id": "12",
       "flag": "it",
       "links": [
         {
@@ -484,7 +526,7 @@
     },
     {
       "name": "Lithuania",
-      "id": "11",
+      "id": "13",
       "flag": "lt",
       "links": [
         {
@@ -522,7 +564,7 @@
     },
     {
       "name": "Luxembourg",
-      "id": "12",
+      "id": "14",
       "flag": "lu",
       "links": [
         {
@@ -541,7 +583,7 @@
     },
     {
       "name": "Malta",
-      "id": "13",
+      "id": "15",
       "flag": "mt",
       "links": [
         {
@@ -566,8 +608,27 @@
       ]
     },
     {
+      "name": "Monaco",
+      "id": "16",
+      "flag": "mc",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/s4m55r2Jv8"
+        },
+        {
+          "type": "x",
+          "url": "https://x.com/MonacoSmash"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/monacosmash"
+        }
+      ]
+    },
+    {
       "name": "Netherlands",
-      "id": "14",
+      "id": "17",
       "flag": "nl",
       "links": [
         {
@@ -659,7 +720,7 @@
     },
     {
       "name": "Norway",
-      "id": "15",
+      "id": "18",
       "flag": "no",
       "links": [
         {
@@ -701,7 +762,7 @@
     },
     {
       "name": "Poland",
-      "id": "16",
+      "id": "19",
       "flag": "pl",
       "links": [
         {
@@ -728,7 +789,7 @@
     },
     {
       "name": "Portugal",
-      "id": "17",
+      "id": "20",
       "flag": "pt",
       "links": [
         {
@@ -766,7 +827,7 @@
     },
     {
       "name": "Russia",
-      "id": "18",
+      "id": "21",
       "flag": "ru",
       "games": [
         {
@@ -782,7 +843,7 @@
     },
     {
       "name": "Scotland",
-      "id": "19",
+      "id": "22",
       "flag": "gb-sct",
       "links": [
         {
@@ -808,7 +869,7 @@
     },
     {
       "name": "Spain",
-      "id": "20",
+      "id": "23",
       "flag": "es",
       "links": [
         {
@@ -858,7 +919,7 @@
     },
     {
       "name": "Sweden",
-      "id": "21",
+      "id": "24",
       "flag": "se",
       "links": [
         {
@@ -897,7 +958,7 @@
     },
     {
       "name": "Switzerland",
-      "id": "22",
+      "id": "25",
       "flag": "ch",
       "links": [
         {
@@ -959,8 +1020,28 @@
       ]
     },
     {
+      "name": "Turkey",
+      "id": "26",
+      "flag": "tr",
+      "games": [
+        {
+          "name": "ultimate",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/TN7JxF6"
+            },
+            {
+              "type": "fb",
+              "url": "https://www.facebook.com/groups/1077274655713512/"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Ukraine",
-      "id": "23",
+      "id": "27",
       "flag": "ua",
       "links": [
         {
@@ -975,7 +1056,7 @@
     },
     {
       "name": "United Kingdom",
-      "id": "24",
+      "id": "28",
       "flag": "gb",
       "links": [
         {
