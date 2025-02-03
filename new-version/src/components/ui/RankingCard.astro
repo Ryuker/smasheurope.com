@@ -1,0 +1,27 @@
+---
+import LinkButton from "./LinkButton.astro";
+import RankingImage from "./RankingImage.astro";
+
+const { 
+  game,
+  year,
+  url,
+  imagePath
+} = Astro.props;
+
+function capitalize(text: string){
+  return text.charAt(0).toUpperCase() + text.slice(1)
+}
+
+---
+
+<div class="flex flex-col p-5 lg:p-5 xl:p-6 items-center justify-center shadow-md rounded-lg gap-5 min-w-full md:min-w-[400px] md:max-w-[400px] lg:max-w-[500px]">
+  <div class="flex basis-full">
+    <RankingImage imagePath={imagePath}` alt=`${capitalize(game)} Ranking banner` />
+  </div>
+  <h3 class="flex justify-center align-middle text-se-dark text-2xl font-bold">
+    {game}
+  </h3>
+  <span>#{year}</span>
+  <LinkButton icon="trophy" text="View Ranking" url={url} newTab={true} classes="flex gap-2 items-center"/>
+</div>

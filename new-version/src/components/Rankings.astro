@@ -1,0 +1,34 @@
+---
+import LinkButton from "./ui/LinkButton.astro";
+import RankingCard from "./ui/RankingCard.astro";
+---
+
+<section id="rankings">
+  <h2 class="text-xl md:text-3xl font-bold text-se-dark mt-10 mb-5 text-center">
+    Recent European Rankings
+  </h2>
+  <div class="mx-auto flex justify-center max-w-6xl mb-10">
+    <div class="flex flex-col w-full justify-center items-center mx-5 sm:mx-10 h-full  md:max-w-6xl">
+      <div class="flex flex-wrap justify-center gap-10 md:gap-5 xl:gap-10">
+        <RankingCard 
+          game="Smash Bros. Ultimate" 
+          year="2024"
+          url="https://medium.com/@euprssbu/european-power-rankings-2024-introduction-635ae41ed6e9"
+          imagePath=`2024/ultimate-eupr-2024.webp`
+        />
+        <RankingCard 
+          game="Smash Bros. Melee" 
+          year="2024"
+          url="https://nouns.gg/articles/eurank-2024-10-1"
+          imagePath=`2024/melee-eupr-2024.png`
+        />
+        <RankingCard 
+          game="Project M/+"
+          year="2023" 
+          url="https://smashboards.com/threads/pmrank-2023-eu-20-11.522056/"
+          imagePath=`2023/projectplus-eupr-2023.png`
+        />
+      </div>
+    </div>  
+  </div>
+</section>
