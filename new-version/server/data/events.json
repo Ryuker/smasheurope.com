@@ -575,22 +575,21 @@
       "slug": "valhalla-5"
     },
     {
-      "id": "b416",
-      "banner": "Festa2025/festa_2025-banner-se.png",
-      "title": "Festa 2025",
+      "banner": "MIK2/mik2-banner.png",
+      "title": "Melee im Kornspeicher 2",
       "games": "Melee",
-      "description": "Follow up to a Melee experience unlike anything you've ever seen before 🌴 FESTA is a seven day event with the community in focus, packed with activities, gaming and relaxation. The venue? An island in the Stockholm archipelago. Caught your attention?",
+      "description": "Hosted in the castle of Burg Lohra this is a 4 day event with competitions taking place on friday and saturday accompanied with side events on the other days. Capacity is limited, there's a waiting list to sign up for.",
       "dates": [
-        "2025-08-10T00:00:00.000Z",
-        "2025-08-16T20:00:00.000Z"
+        "2025-05-08T00:00:00.000Z",
+        "2025-05-11T20:00:00.000Z"
       ],
       "location": {
-        "municipality": "Grinda",
-        "country": "Sweden"
+        "municipality": "Großlohra",
+        "country": "Germany"
       },
-      "prevEventDetails": "https://www.start.gg/tournament/festa-2024/details",
-      "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"zxx\" dir=\"ltr\"><a href=\"https://t.co/PJQAN8qxmd\">pic.twitter.com/PJQAN8qxmd</a></p>&mdash; Phoenix Blue (@PXBgg) <a href=\"https://twitter.com/PXBgg/status/1863266880405811591?ref_src=twsrc%5Etfw\">December 1, 2024</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-      "slug": "festa-2025"
+      "details": "https://www.start.gg/tournament/melee-im-kornspeicher-2/details",
+      "slug": "melee-im-kornspeicher-2",
+      "id": "gXeqV3R"
     },
     {
       "banner": "TheConcert/the-concert-banner.jpg",
@@ -608,6 +607,24 @@
       "details": "https://www.start.gg/tournament/the-concert/details",
       "slug": "the-concert",
       "id": "HuEBPp9"
+    },
+    {
+      "id": "b416",
+      "banner": "Festa2025/festa_2025-banner-se.png",
+      "title": "Festa 2025",
+      "games": "Melee",
+      "description": "Follow up to a Melee experience unlike anything you've ever seen before 🌴 FESTA is a seven day event with the community in focus, packed with activities, gaming and relaxation. The venue? An island in the Stockholm archipelago. Caught your attention?",
+      "dates": [
+        "2025-08-10T00:00:00.000Z",
+        "2025-08-16T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Grinda",
+        "country": "Sweden"
+      },
+      "prevEventDetails": "https://www.start.gg/tournament/festa-2024/details",
+      "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"zxx\" dir=\"ltr\"><a href=\"https://t.co/PJQAN8qxmd\">pic.twitter.com/PJQAN8qxmd</a></p>&mdash; Phoenix Blue (@PXBgg) <a href=\"https://twitter.com/PXBgg/status/1863266880405811591?ref_src=twsrc%5Etfw\">December 1, 2024</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+      "slug": "festa-2025"
     }
   ]
 }
