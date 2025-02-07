@@ -592,6 +592,24 @@
       "id": "gXeqV3R"
     },
     {
+      "banner": "USGF/usgf-banner.jpg",
+      "title": "Uzès Symphonic Gaming Festival",
+      "games": "Ultimate",
+      "description": "This is the first international festival that combines the world of  eSports and Trading Card Games with the world of symphonic music and aims to offer spectators a unique experience. It features video game tournaments with music played by a symphony orchestra. Smash Bros. Ultimate Singles and Doubles competitions are among the lineup. There's a capacity for 512 competitors.",
+      "dates": [
+        "2025-05-29T00:00:00.000Z",
+        "2025-06-01T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Uzès",
+        "country": "France"
+      },
+      "details": "https://uzessymphonicgamingfestival.com/billetterie/",
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/upnSrJXYS3E?si=1vEbNdFwPTO1Cnaz",
+      "slug": "usgf-2025",
+      "id": "xEzrQad"
+    },
+    {
       "banner": "TheConcert/the-concert-banner.jpg",
       "title": "The Concert",
       "games": "Melee",
