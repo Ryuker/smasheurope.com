@@ -95,8 +95,8 @@ const datesStr = `
   
           {event.extraVideos && event.extraVideos.map(video => (
             video.embedCode ? 
-              <Modal icon="trailer" title={`${event.title} ${video.text}`}
-                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${event.title} ${video.text}`}>
+              <Modal icon="trailer" title={`${video.text}`}
+                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${video.text}`}>
                 <main slot="main" class="flex basis-full w-full">
                   <div class="flex justify-center w-[800px]">
                     <div class="w-full flex justify-center">
@@ -105,8 +105,8 @@ const datesStr = `
                   </div>
                 </main>
               </Modal>
-            : <Modal icon="trailer" title={`${event.title} ${video.text}`} 
-                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${event.title} ${video.text}`}>
+            : <Modal icon="trailer" title={`${video.text}`} 
+                buttonId={`${event.slug}-${video.id}`} tooltipText={`Watch ${video.text}`}>
                 <main slot="main" class="flex basis-full w-full">
                   <div class="flex justify-center w-[800px]">
                     <div class="video w-full h-full">
