@@ -126,8 +126,30 @@
       ]
     },
     {
-      "name": "Denmark",
+      "name": "Czechia",
       "id": "4",
+      "flag": "cz",
+      "links": [
+        {
+          "type": "fb",
+          "url": "https://www.facebook.com/groups/963803600308240"
+        }
+      ],
+      "games": [
+        {
+          "name": "melee",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/GVwHD3MXac"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Denmark",
+      "id": "5",
       "flag": "dk",
       "links": [
         {
@@ -169,7 +191,7 @@
     },
     {
       "name": "Finland",
-      "id": "5",
+      "id": "6",
       "flag": "fi",
       "links": [
         {
@@ -200,7 +222,7 @@
     },
     {
       "name": "Hungary",
-      "id": "6",
+      "id": "7",
       "flag": "hu",
       "links": [
         {
@@ -227,7 +249,7 @@
     },
     {
       "name": "Iceland",
-      "id": "7",
+      "id": "8",
       "flag": "is",
       "links": [
         {
@@ -246,7 +268,7 @@
     },
     {
       "name": "France",
-      "id": "8",
+      "id": "9",
       "flag": "fr",
       "games": [
         {
@@ -329,7 +351,7 @@
     },
     {
       "name": "Germany",
-      "id": "9",
+      "id": "10",
       "flag": "de",
       "games": [
         {
@@ -359,6 +381,10 @@
             {
               "type": "x",
               "url": "https://twitter.com/German_Melee"
+            },
+            {
+              "type": "bs",
+              "url": "https://bsky.app/profile/germanmelee.bsky.social"
             },
             {
               "type": "fb",
@@ -392,7 +418,7 @@
     },
     {
       "name": "Greece",
-      "id": "10",
+      "id": "11",
       "flag": "gr",
       "games": [
         {
@@ -441,7 +467,7 @@
     },
     {
       "name": "Ireland",
-      "id": "11",
+      "id": "12",
       "flag": "ie",
       "links": [
         {
@@ -479,7 +505,7 @@
     },
     {
       "name": "Italy",
-      "id": "12",
+      "id": "13",
       "flag": "it",
       "links": [
         {
@@ -534,7 +560,7 @@
     },
     {
       "name": "Lithuania",
-      "id": "13",
+      "id": "14",
       "flag": "lt",
       "links": [
         {
@@ -572,7 +598,7 @@
     },
     {
       "name": "Luxembourg",
-      "id": "14",
+      "id": "15",
       "flag": "lu",
       "links": [
         {
@@ -591,7 +617,7 @@
     },
     {
       "name": "Malta",
-      "id": "15",
+      "id": "16",
       "flag": "mt",
       "links": [
         {
@@ -617,7 +643,7 @@
     },
     {
       "name": "Monaco",
-      "id": "16",
+      "id": "17",
       "flag": "mc",
       "links": [
         {
@@ -636,7 +662,7 @@
     },
     {
       "name": "Netherlands",
-      "id": "17",
+      "id": "18",
       "flag": "nl",
       "links": [
         {
@@ -728,7 +754,7 @@
     },
     {
       "name": "Norway",
-      "id": "18",
+      "id": "19",
       "flag": "no",
       "links": [
         {
@@ -770,7 +796,7 @@
     },
     {
       "name": "Poland",
-      "id": "19",
+      "id": "20",
       "flag": "pl",
       "links": [
         {
@@ -797,7 +823,7 @@
     },
     {
       "name": "Portugal",
-      "id": "20",
+      "id": "21",
       "flag": "pt",
       "links": [
         {
@@ -835,7 +861,7 @@
     },
     {
       "name": "Russia",
-      "id": "21",
+      "id": "22",
       "flag": "ru",
       "games": [
         {
@@ -851,7 +877,7 @@
     },
     {
       "name": "Scotland",
-      "id": "22",
+      "id": "23",
       "flag": "gb-sct",
       "links": [
         {
@@ -877,7 +903,7 @@
     },
     {
       "name": "Spain",
-      "id": "23",
+      "id": "24",
       "flag": "es",
       "links": [
         {
@@ -927,7 +953,7 @@
     },
     {
       "name": "Sweden",
-      "id": "24",
+      "id": "25",
       "flag": "se",
       "links": [
         {
@@ -966,7 +992,7 @@
     },
     {
       "name": "Switzerland",
-      "id": "25",
+      "id": "26",
       "flag": "ch",
       "links": [
         {
@@ -1029,7 +1055,7 @@
     },
     {
       "name": "Turkey",
-      "id": "26",
+      "id": "27",
       "flag": "tr",
       "games": [
         {
@@ -1049,7 +1075,7 @@
     },
     {
       "name": "Ukraine",
-      "id": "27",
+      "id": "28",
       "flag": "ua",
       "links": [
         {
@@ -1064,7 +1090,7 @@
     },
     {
       "name": "United Kingdom",
-      "id": "28",
+      "id": "29",
       "flag": "gb",
       "links": [
         {
