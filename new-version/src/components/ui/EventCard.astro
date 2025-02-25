@@ -24,8 +24,8 @@ const datesStr = `
     ${dates.endDate.day !== dates.startDate.day ? "- "+ dates.endDate.day + dates.endDate.suffix : ''}
     ${dates.endDate.month !== dates.startDate.month ? dates.endDate.month : ''}`
 ---
-<div class="min-h-[500px]">
-  <div class="bg-white h-full rounded-lg p-8 shadow-md w-full lg:w-[460px]" data-event>
+<div class="min-h-[500px]" data-event>
+  <div class="bg-white h-full rounded-lg p-8 shadow-md w-full lg:w-[460px]">
     <div class="flex min-h-full flex-col justify-start">
       <span class="flex basis-full leading-none mb-3 items-center justify-center text-se-dark text-base font-semibold">
         {event.games}
