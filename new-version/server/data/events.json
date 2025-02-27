@@ -564,7 +564,7 @@
         "municipality": "Copenhagen",
         "country": "Denmark"
       },
-      "details": "https://start.gg/valhalla5",
+      "details": "https://start.gg/valhalla",
       "extraVideos": [
         {
           "id": "after-movie",
@@ -592,7 +592,7 @@
       "id": "gXeqV3R"
     },
     {
-      "banner": "USGF/usgf-banner.jpg",
+      "banner": "USGF/usgf-banner.png",
       "title": "Uzès Symphonic Gaming Festival",
       "games": "Ultimate",
       "description": "This is the first international festival that combines the world of  eSports and Trading Card Games with the world of symphonic music and aims to offer spectators a unique experience. It features video game tournaments with music played by a symphony orchestra. Smash Bros. Ultimate Singles and Doubles competitions are among the lineup. There's a capacity for 512 competitors.",
@@ -604,7 +604,7 @@
         "municipality": "Uzès",
         "country": "France"
       },
-      "details": "https://uzessymphonicgamingfestival.com/billetterie/",
+      "details": "https://www.start.gg/tournament/uzes-symphonic-gaming-festival-2025/details",
       "trailerUrl": "https://www.youtube-nocookie.com/embed/upnSrJXYS3E?si=1vEbNdFwPTO1Cnaz",
       "slug": "usgf-2025",
       "id": "xEzrQad"
