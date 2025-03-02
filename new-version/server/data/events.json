@@ -575,6 +575,24 @@
       "slug": "valhalla-5"
     },
     {
+      "banner": "NTZ/ntz-se-banner.webp",
+      "title": "No Tech Zone",
+      "games": "Ultimate",
+      "description": "The hosts of Icarus bring you a brand new Major hosted in the heart of Milan, easily reachable from every train station or airport. The event has a space of 600 square meters, offers singles, doubles and ladder competitions and various side events. There's capacity for 320 competitors.",
+      "dates": [
+        "2025-05-03T00:00:00.000Z",
+        "2025-05-04T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Milan",
+        "country": "Italy"
+      },
+      "details": "https://www.start.gg/no-tech-zone-2/",
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/TET6IeEWoz8?si=6WDKEVB5_bN4YVrH",
+      "slug": "ntz",
+      "id": "7qph6IQ"
+    },
+    {
       "banner": "MIK2/mik2-banner.png",
       "title": "Melee im Kornspeicher 2",
       "games": "Melee",
