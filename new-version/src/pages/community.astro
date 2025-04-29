@@ -8,6 +8,7 @@ import LinkButton from "@components/ui/LinkButton.astro";
 import Modal from "@components/ui/Modal.astro";
 import Communities from "@components/Communities.astro";
 import CardsFilter from "@components/CardsFilter.astro";
+import ContinentCard from "@components/ui/ContinentCard.astro";
 
 
 const inStaticMode = await import.meta.env.STATIC_MODE;
@@ -26,6 +27,50 @@ const countries = data;
 
 // console.log(countries);
 
+const europe = {
+  "name": "Europe",
+  "id": "0",
+  "flag": "eu",
+  "games": [
+    {
+      "name": "ultimate",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/x4Kugf2"
+        }
+      ]
+    },
+    {
+      "name": "melee",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/PBZNzg6eyF"
+        }
+      ]
+    },
+    {
+      "name": "project-plus",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/rXA5NVPPA6"
+        }
+      ]
+    },
+    {
+      "name": "smash-64",
+      "links": [
+        {
+          "type": "discord",
+          "url": "https://discord.gg/gxBbhk9"
+        }
+      ]
+    },
+  ]
+};
+
 ---
 
 <MainLayout title="European Smash Communities">
@@ -39,6 +84,12 @@ const countries = data;
 		<p>Best of luck on your Smash journey!</p>
 		<p class="text-se-dark">—The SmashEurope Development Team</p>
 	</Hero>
+
+  <section id="continent-wide">
+    <div class="mx-auto w-full flex justify-center pt-10">
+        <ContinentCard continent={europe} />
+    </div>
+  </section>
 
   <Communities countries={countries} />
 	

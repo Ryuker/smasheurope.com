@@ -1,6 +1,5 @@
 ---
-import Button from "./Button.astro";
-import CountryLinks from "./CountryLinks.astro";
+import GameLinks from "./GameLinks.astro";
 import LinkButton from "./LinkButton.astro";
 import ToggleButton from "./ToggleButton.astro";
 
@@ -96,7 +95,7 @@ function getGameByName(name: string) {
           </div>
         </div>
       }
-      <!-- Discors and Socials -->
+      <!-- Discords and Socials -->
       { country.games && 
         <div class="font-semibold text-center mb-3">Game Specific Communities</div>
         <div class="text-center border-2 rounded-lg border-se-blue-200 p-2 md:p-4" data-game-container>
@@ -122,22 +121,22 @@ function getGameByName(name: string) {
           </div>
           <div class="flex flex-col">
             { gameExists('ultimate') && 
-              <CountryLinks country={country} game={getGameByName('ultimate')} gameName="Smash Bros.Ultimate" gameId="ultimate" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('ultimate')} gameName="Smash Bros.Ultimate" gameId="ultimate" classes="hidden" />
             }
             { gameExists('wii-u') && 
-              <CountryLinks country={country} game={getGameByName('wii-u')} gameName="Smash Bros. for Wii U / 3DS" gameId="wii-u" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('wii-u')} gameName="Smash Bros. for Wii U / 3DS" gameId="wii-u" classes="hidden" />
             }
             { gameExists('melee') && 
-              <CountryLinks country={country} game={getGameByName('melee')} gameName="Smash Bros. Melee" gameId="melee" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('melee')} gameName="Smash Bros. Melee" gameId="melee" classes="hidden" />
             }
             { gameExists('project-plus') && 
-              <CountryLinks country={country} game={getGameByName('project-plus')} gameName="Project M/+" gameId="project-plus" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('project-plus')} gameName="Project M/+" gameId="project-plus" classes="hidden" />
             }
             { gameExists('brawl') && 
-              <CountryLinks country={country} game={getGameByName('brawl')} gameName="Smash Bros. Brawl" gameId="brawl" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('brawl')} gameName="Smash Bros. Brawl" gameId="brawl" classes="hidden" />
             }
             { gameExists('smash-64') && 
-              <CountryLinks country={country} game={getGameByName('smash-64')} gameName="Smash Bros. 64" gameId="smash-64" classes="hidden" />
+              <GameLinks country={country} game={getGameByName('smash-64')} gameName="Smash Bros. 64" gameId="smash-64" classes="hidden" />
             }
           </div>
         </div>

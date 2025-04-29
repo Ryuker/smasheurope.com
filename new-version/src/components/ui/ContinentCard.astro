@@ -1,0 +1,88 @@
+---
+import GameLinks from "./GameLinks.astro";
+import ToggleButton from "./ToggleButton.astro";
+
+const { continent } = Astro.props;
+
+const { links, games }  = continent;
+
+function exists(type: string) {
+  return links.some( link => link.type === type ) ? true : false ;
+}
+
+function getLinkByType(type: string) {
+  return links.find( link => link.type === type );
+}
+
+function gameExists(name: string) {
+  // console.log('gameExists', name, country.name, games.some( game => game.name === name));
+  return games.some( game => game.name === name) ? true : false;
+}
+
+function getGameByName(name: string) {
+  return games.find( game => game.name === name );
+}
+---
+
+<div class="min-h-[200px] px-5 sm:px-5 md:p-0" data-card>
+  <div class="bg-white rounded-lg shadow-md w-full sm:w-full lg:w-[800px]">
+    <div class="flex justify-between mb-5">
+      <div class="flex items-center text-2xl text-se-dark capitalize flex-1 pl-5 border-b-2 border-gray-300">
+        <span data-card-title>{continent.name}</span>
+      </div>
+      <div class="h-20 w-20">
+        <div class=`fib fi-${continent.flag} fis block w-full h-full p-0 rounded-tr-lg`></div>
+      </div>
+    </div>
+
+    <!-- Overarching Social Media -->
+    <div class="flex min-h-full flex-col justify-start p-4 md:p-8 pt-0">
+      <!-- Discords and Socials -->
+      { continent.games && 
+        <div class="font-semibold text-center mb-3">Game Specific Communities</div>
+        <div class="text-center border-2 rounded-lg border-se-blue-200 p-2 md:p-4" data-game-container>
+          <div class="flex justify-center flex-wrap gap-2 md:gap-5">
+            { gameExists('ultimate') && 
+              <ToggleButton id=`${continent.flag}-ultimate` text="Ultimate" classes="w-full" target="ultimate" targetType="game"/>
+            }
+            { gameExists('wii-u') && 
+              <ToggleButton id=`${continent.flag}-wii-u` text="Wii-U / 3DS" classes="w-full" target="wii-u" targetType="game"/>
+            }
+            { gameExists('melee') && 
+              <ToggleButton id=`${continent.flag}-melee` text="Melee" classes="w-full" target="melee" targetType="game"/>
+            } 
+            { gameExists('project-plus') && 
+              <ToggleButton id=`${continent.flag}-project-plus` text="Project M/+" classes="w-full" target="project-plus" targetType="game"/>
+            }
+            { gameExists('brawl') && 
+              <ToggleButton id=`${continent.flag}-brawl` text="Brawl" classes="w-full" target="brawl" targetType="game"/>
+            }
+            { gameExists('smash-64') && 
+              <ToggleButton id=`${continent.flag}-smash-64` text="Smash 64" classes="w-full" target="smash-64" targetType="game"/>
+            }
+          </div>
+          <div class="flex flex-col">
+            { gameExists('ultimate') && 
+              <GameLinks country={continent} game={getGameByName('ultimate')} gameName="Smash Bros.Ultimate" gameId="ultimate" classes="hidden" />
+            }
+            { gameExists('wii-u') && 
+              <GameLinks country={continent} game={getGameByName('wii-u')} gameName="Smash Bros. for Wii U / 3DS" gameId="wii-u" classes="hidden" />
+            }
+            { gameExists('melee') && 
+              <GameLinks country={continent} game={getGameByName('melee')} gameName="Smash Bros. Melee" gameId="melee" classes="hidden" />
+            }
+            { gameExists('project-plus') && 
+              <GameLinks country={continent} game={getGameByName('project-plus')} gameName="Project M/+" gameId="project-plus" classes="hidden" />
+            }
+            { gameExists('brawl') && 
+              <GameLinks country={continent} game={getGameByName('brawl')} gameName="Smash Bros. Brawl" gameId="brawl" classes="hidden" />
+            }
+            { gameExists('smash-64') && 
+              <GameLinks country={continent} game={getGameByName('smash-64')} gameName="Smash Bros. 64" gameId="smash-64" classes="hidden" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
