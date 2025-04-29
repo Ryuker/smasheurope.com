@@ -397,11 +397,20 @@
           ]
         },
         {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/JvQWwWsCNj"
+            }
+          ]
+        },
+        {
           "name": "wii-u",
           "links": [
             {
               "type": "discord",
-              "url": "discord.gg/XpjNsRp"
+              "url": "https://discord.gg/XpjNsRp"
             }
           ]
         },
@@ -553,6 +562,15 @@
             {
               "type": "fb",
               "url": "https://www.facebook.com/groups/smashbrositalia/"
+            }
+          ]
+        },
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/SmaXuZvSTe"
             }
           ]
         }
@@ -948,6 +966,15 @@
               "url": "https://www.facebook.com/groups/116757201803852/"
             }
           ]
+        },
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/EyQ4vjF"
+            }
+          ]
         }
       ]
     },
@@ -1142,6 +1169,15 @@
             {
               "type": "twitch",
               "url": "https://www.twitch.tv/phoenixsmash"
+            }
+          ]
+        },
+        {
+          "name": "melee",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/zSqHkVe6G4"
             }
           ]
         }
