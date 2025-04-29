@@ -697,6 +697,24 @@
       "details": "https://www.start.gg/tournament/festa-2025/details",
       "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"zxx\" dir=\"ltr\"><a href=\"https://t.co/PJQAN8qxmd\">pic.twitter.com/PJQAN8qxmd</a></p>&mdash; Phoenix Blue (@PXBgg) <a href=\"https://twitter.com/PXBgg/status/1863266880405811591?ref_src=twsrc%5Etfw\">December 1, 2024</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
       "slug": "festa-2025"
+    },
+    {
+      "banner": "SAPF2/sapf2-banner-se.png",
+      "title": "SAPF 2",
+      "games": "Melee",
+      "description": "SAPF features some top talent from Germany, Europe and beyond! With more than 800 m2 in venue space and over 60 setups there's space for 256 singles and 256 doubles competitors (ex.spectators). There's also ladder and crew competitions.",
+      "dates": [
+        "2026-04-10T00:00:00.000Z",
+        "2026-04-12T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Hannover",
+        "country": "Germany"
+      },
+      "details": "https://www.start.gg/sapf-2/",
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/EWaoogA4MUw?si=d4ld8mBS4Xu3sW48",
+      "slug": "sapf-2",
+      "id": "cHsjI4J"
     }
   ]
 }
