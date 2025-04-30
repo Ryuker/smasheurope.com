@@ -186,6 +186,15 @@
               "url": "https://www.facebook.com/groups/1397200900559117"
             }
           ]
+        },
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/UADR6yw"
+            }
+          ]
         }
       ]
     },
@@ -217,6 +226,17 @@
         {
           "type": "twitch",
           "url": "https://www.twitch.tv/smashfinland"
+        }
+      ],
+      "games":[
+        {
+          "name":"project-plus",
+          "links":[
+            {
+              "type":"discord",
+              "url":"https://discord.gg/UADR6yw"
+            }
+          ]
         }
       ]
     },
@@ -263,6 +283,17 @@
         {
           "type": "x",
           "url": "https://x.com/ZonersParadise"
+        }
+      ],
+      "games": [
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/UADR6yw"
+            }
+          ]
         }
       ]
     },
@@ -809,6 +840,15 @@
               "url": "https://www.facebook.com/groups/meleenorway/"
             }
           ]
+        },
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/UADR6yw"
+            }
+          ]
         }
       ]
     },
@@ -1012,6 +1052,15 @@
             {
               "type": "fb",
               "url": "https://www.facebook.com/groups/182402298476505/"
+            }
+          ]
+        },
+        {
+          "name": "project-plus",
+          "links": [
+            {
+              "type": "discord",
+              "url": "https://discord.gg/UADR6yw"
             }
           ]
         }
