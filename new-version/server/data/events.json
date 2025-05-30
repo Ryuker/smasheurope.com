@@ -610,6 +610,24 @@
       "id": "gXeqV3R"
     },
     {
+      "banner": "Somnio7/somnio7-banner-se.webp",
+      "title": "Somnio VII",
+      "games": "Melee | Ultimate",
+      "description": "From the people behind DreamHack Rotterdam, Sector Z and NL Arcadian, Somnio is back as part of the Eindhoven Game Festival with singles and doubles competions for Melee, Ultimate and \"Brawl\" plus several other games and holds a capacity for 256 attendees. For the first time in the series's history this is a multiday event.",
+      "dates": [
+        "2025-05-17T00:00:00.000Z",
+        "2025-05-18T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Eindhoven",
+        "country": "Netherlands"
+      },
+      "details": "https://www.start.gg/tournament/somnio-7/",
+      "trailerUrl": "https://www.youtube.com/embed/T6R7ZmuhzS4?si=R5ct1exrFnCnmVzo",
+      "slug": "somnio-7",
+      "id": "7YB-XKE"
+    },
+    {
       "banner": "USGF/usgf-banner.png",
       "title": "Uzès Symphonic Gaming Festival",
       "games": "Ultimate",
@@ -644,24 +662,6 @@
       "trailerUrl": "https://www.youtube-nocookie.com/embed/wD5Vek9t1Kw?si=kJ6we-Pc-8gIG6yA",
       "slug": "ldtp",
       "id": "H7lyUCY"
-    },
-    {
-      "banner": "Somnio7/somnio7-banner-se.webp",
-      "title": "Somnio VII",
-      "games": "Melee | Ultimate",
-      "description": "From the people behind DreamHack Rotterdam, Sector Z and NL Arcadian, Somnio is back as part of the Eindhoven Game Festival with singles and doubles competions for Melee, Ultimate and \"Brawl\" plus several other games and holds a capacity for 256 attendees. For the first time in the series's history this is a multiday event.",
-      "dates": [
-        "2025-05-17T00:00:00.000Z",
-        "2025-05-18T20:00:00.000Z"
-      ],
-      "location": {
-        "municipality": "Eindhoven",
-        "country": "Netherlands"
-      },
-      "details": "https://www.start.gg/tournament/somnio-7/",
-      "trailerUrl": "https://www.youtube.com/embed/T6R7ZmuhzS4?si=R5ct1exrFnCnmVzo",
-      "slug": "somnio-7",
-      "id": "7YB-XKE"
     },
     {
       "banner": "TheConcert/the-concert-banner.jpg",
