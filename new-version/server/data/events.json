@@ -716,6 +716,40 @@
       "slug": "festa-2025"
     },
     {
+      "banner": "SM2025/sm2025-se-banner.png",
+      "title": "SmashMania 2025",
+      "games": "Ultimate",
+      "description": "Team Askalon presents Smash Mania 2025 at Cadets de Bretagne. There's singles, 3 vs 3 and Ladder competitions for Ultimate along with several other fighting/platform fighters. There's a capacity for 384 competitors. For Ultimate singles there's a €2700 cash prize. Japanese top player Hurt makes his first appearance in Europe.",
+      "dates": [
+        "2025-09-27T00:00:00.000Z",
+        "2025-09-28T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Rennes",
+        "country": "France"
+      },
+      "details": "https://www.start.gg/tournament/smashmania-2025",
+      "slug": "sm-2025",
+      "id": "qVzh71j"
+    },
+    {
+      "banner": "Teaghlach/teaghlach-se-banner.png",
+      "title": "Teaghlach",
+      "games": "Melee",
+      "description": "Coming a mere 3 years later than initially promised, Teaghlach (\"family\" as Gaeilge) is a self-catered, community-driven retreat packed with Melee and mischief. The team is bringing together the very best of Irish Melee along with international talent to one of Ireland's most beautiful settings. Expect intense sets, late-night sessions and a whole lot of craic.",
+      "dates": [
+        "2025-10-10T00:00:00.000Z",
+        "2025-10-12T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Wicklow",
+        "country": "Ireland"
+      },
+      "details": "https://www.start.gg/tournament/teaghlach",
+      "slug": "teaghlach",
+      "id": "h_D4Mw5"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
