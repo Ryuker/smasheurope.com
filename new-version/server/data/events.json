@@ -750,6 +750,24 @@
       "id": "h_D4Mw5"
     },
     {
+      "banner": "SomnioNoctem/somnio-noctem-se-banner.png",
+      "title": "Somnio Noctem",
+      "games": "Melee | Ultimate | \"Brawl\"",
+      "description": "The Somnio team is scoping up to be bring The Netherlands a new 🕸spooky🕸 Major, Somnio Noctem hosted in the <a target=\"_blank\" href=\"https://h20.gg/en/\">H20 Esports Campus</a> in Purmerend (near Amsterdam). There's singles, doubles and 3 vs 3 crew competitions for Melee and Ultimate along with several other games to compete in and exciting (Halloween themed) side events. There's a max capacity of 512 attendees.",
+      "dates": [
+        "2025-10-31T00:00:00.000Z",
+        "2025-11-02T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Purmerend",
+        "country": "Netherlands"
+      },
+      "details": "https://www.start.gg/tournament/somnio-noctem",
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/F2iNVKlflIg?si=RQrM2VhuN_DdAQiu",
+      "slug": "somnio-noctem",
+      "id": "65O16Js"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
