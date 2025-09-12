@@ -768,6 +768,41 @@
       "id": "65O16Js"
     },
     {
+      "banner": "LXKO2025/lxko2025-se-banner.png",
+      "title": "Lisbon Knock-Out 2025",
+      "games": "Ultimate",
+      "description": "As part of the <a target=\"_blank\" href=\"https://lisboagamesweek.pt/\">Lisboa Games Week</a>, this is Lisbon’s first major Smash Bros and Fighting Game event hosted inside a gaming festival. For 4 days, top players, fans, and curious newcomers meet in Lisbon to compete in prestigious tournaments and explore all the festival has to offer. For Smash Bros. Ultimate there's Singles, Doubles and Ladder competitions. There's a capactiy for 320 competitors.",
+      "dates": [
+        "2025-11-20T00:00:00.000Z",
+        "2025-11-23T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Lisbon",
+        "country": "Portugal"
+      },
+      "details": "https://www.start.gg/tournament/lisbon-knock-out-2025/",
+      "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"en\" dir=\"ltr\">🚨 ANNOUNCEMENT 🚨<br><br>Lisbon Knock-Out (LXKO) lands this Nov 22–23 at Lisboa Games Week 🇵🇹🔥<br><br>🎮 8 tournaments<br>👥 320 player cap<br>🌍 International pros for SSBU<br>🎥 Main stage + live stream<br><br>The biggest FGC+SSBU stage ever in Portugal.<br><br>This is where legends are made. 💥<a href=\"https://twitter.com/hashtag/LXKO?src=hash&amp;ref_src=twsrc%5Etfw\">#LXKO</a>… <a href=\"https://t.co/0GEmyXSXko\">pic.twitter.com/0GEmyXSXko</a></p>&mdash; Locus Crew (@LocusCrewPT) <a href=\"https://twitter.com/LocusCrewPT/status/1964357931375247459?ref_src=twsrc%5Etfw\">September 6, 2025</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+      "slug": "lxko-2025",
+      "id": "4tBkh9D"
+    },
+    {
+      "banner": "DHS2025/dhs2025-se-banner.webp",
+      "title": "DreamHack Stockholm 2025",
+      "games": "Melee",
+      "description": "Smash Bros. Melee is back at another DreamhHack event, this time part of the <a target=\"_blank\" href=\"https://dreamhack.com/stockholm/#/\">Stockholm edition</a>. There singles and doubles competitions. Max capacity is currently unknown. Entree to the tournaments are free but a ticket to the festival must be purchased on the DreamHack event's website.",
+      "dates": [
+        "2025-11-28T00:00:00.000Z",
+        "2025-11-30T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Stockholm",
+        "country": "Sweden"
+      },
+      "details": "https://www.start.gg/tournament/ssbm-sf6-dreamhack-stockholm-2025/",
+      "slug": "dhs-2025",
+      "id": "tmKSjwC"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
