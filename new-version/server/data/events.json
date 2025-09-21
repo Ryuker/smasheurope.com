@@ -803,6 +803,23 @@
       "id": "tmKSjwC"
     },
     {
+      "banner": "Glory4/glory4-se-banner.webp",
+      "title": "GLORY 4",
+      "games": "Ultimate",
+      "description": "As part of the <a target=\"_blank\" href=\"https://saga.cat/\">SAGA2025 Gaming Fair</a> in Barcelona, Mystic Squad is back with the 4th edition in Spain's popular Ultimate series feat. MKLeo, Gackt, MKBigBoss, Glutonny and many more. For 3 days players can play in a venue open 24h. There's singles, doubles and ladder competitions.",
+      "dates": [
+        "2025-11-28T00:00:00.000Z",
+        "2025-11-30T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Barcelona",
+        "country": "Spain"
+      },
+      "details": "https://www.start.gg/glory4",
+      "slug": "glory-4",
+      "id": "SLEI0bx"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
