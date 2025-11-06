@@ -821,6 +821,23 @@
       "id": "SLEI0bx"
     },
     {
+      "banner": "NTTT2025/nttt-2025-se-banner.webp",
+      "title": "No Time To Tilt 2025",
+      "games": "Ultimate",
+      "description": "Germany's Smash Bros. Ultimate Major near Frankfurt is back with singles, doubles, ladder competitions and a mistery tournament 😶‍🌫️.. . The event lasts 3 days and there's a capacity for 450 attendees.",
+      "dates": [
+        "2025-12-05T00:00:00.000Z",
+        "2025-12-07T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Mörfelden-Walldorf",
+        "country": "Germany"
+      },
+      "details": "https://www.start.gg/no-time-to-tilt-2025",
+      "slug": "nttt-2025",
+      "id": "QvqVEvU"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
