@@ -838,6 +838,24 @@
       "id": "QvqVEvU"
     },
     {
+      "banner": "SplashborgResort/splashborg-resort-se-banner.png",
+      "title": "Splashborg Resort",
+      "games": "Ultimate",
+      "description": "Splashborg Resort is here to further unite the Nordic scene and strengthen its presence in Europe! Join them for a weekend of fun events activities such as Nordic Smashies, Pool Party, a Secret Quiz and more! Of course there's also regular singles and doubles competitions. There's a capacity for 256 attendees.",
+      "dates": [
+        "2026-01-09T00:00:00.000Z",
+        "2026-01-11T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Grålum",
+        "country": "Norway"
+      },
+      "embedCode": "<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"en\" dir=\"ltr\">People kept telling me I needed a trailer, I finally found one 👀 <a href=\"https://t.co/nvSL6zaXji\">pic.twitter.com/nvSL6zaXji</a></p>&mdash; Smashborg (@Smashborg_) <a href=\"https://twitter.com/Smashborg_/status/1988294970009395616?ref_src=twsrc%5Etfw\">November 11, 2025</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+      "details": "http://start.gg/splashborg-resort",
+      "slug": "citadel-2",
+      "id": "-mrD6wN"
+    },
+    {
       "banner": "Citadel2/citadel-2-se-banner.webp",
       "title": "Citadel 2",
       "games": "Ultimate",
