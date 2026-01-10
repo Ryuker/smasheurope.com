@@ -873,6 +873,24 @@
       "id": "tGFCbfz"
     },
     {
+      "banner": "GCL2026/gcl2026-se-banner.png",
+      "title": "GamescomLAN x CGN Open 2026",
+      "games": "Ultimate",
+      "description": "As the largest Smash tournament of 2025 in Germany and GamescomLAN x CGN Open achieved A-tier event status for the first time in German Smash history. The sequel continues to aim for new heights and further establish itself as an international major event offering singles and doubles competitions. There's a special offer for a <strong>2 for 1 ticket</strong> in cooperation with <a target=\"_blank\" href=\"http://start.gg/nrw-cup-major-2026\">NRW Cup 2026</a>! There is a capacity for 400 attendees.",
+      "dates": [
+        "2026-03-20T00:00:00.000Z",
+        "2026-03-22T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Köln",
+        "country": "Germany"
+      },
+      "embedCode": "\"<blockquote class=\"twitter-tweet\" data-media-max-width=\"560\"><p lang=\"en\" dir=\"ltr\">A new era in Europe begins.<br><br>gamescom LAN x CGN Open returns in 2026. <br><br>Featuring Smash Ultimate &amp; 2XKO! <a href=\"https://t.co/vjm4P43Zt5\">pic.twitter.com/vjm4P43Zt5</a></p>&mdash; CGN | Tru4 (@Tru4Smash) <a href=\"https://twitter.com/Tru4Smash/status/1997675689550450798?ref_src=twsrc%5Etfw\">December 7, 2025</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\"",
+      "details": "https://start.gg/gamescom-lan-x-cgn-open-2026",
+      "slug": "gcl-2026",
+      "id": "n_-gAGV"
+    },
+    {
       "banner": "SAPF2/sapf2-banner-se.png",
       "title": "SAPF 2",
       "games": "Melee",
@@ -889,6 +907,24 @@
       "trailerUrl": "https://www.youtube-nocookie.com/embed/EWaoogA4MUw?si=d4ld8mBS4Xu3sW48",
       "slug": "sapf-2",
       "id": "cHsjI4J"
+    },
+    {
+      "banner": "NRWCup2026/nrwcup2026-se-banner.webp",
+      "title": "NRW Cup 2026",
+      "games": "Ultimate",
+      "description": "NRW Cup is back with a brand new 3-Day Major Event in Dortmund! Featuring the best players from the DACH Region, as well as some European and International special guests featuring Singles, Doubles, Ladder, The German Smash Pokal as well as a special event. There's a special offer for a <strong>2 for 1 ticket</strong> in cooperation with <a target=\"_blank\" href=\"https://start.gg/gamescom-lan-x-cgn-open-2026\">GamescomLAN x CGN Open 2026</a>. There's a capacity for 512 attendees.",
+      "dates": [
+        "2026-04-10T00:00:00.000Z",
+        "2026-04-12T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Dortmund",
+        "country": "Germany"
+      },
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/aIktZKg1j2E?si=wtcSjnopuPUmHFoZ",
+      "details": "http://start.gg/nrw-cup-major-2026",
+      "slug": "nrwcup-2026",
+      "id": "aH20UVm"
     }
   ]
 }
