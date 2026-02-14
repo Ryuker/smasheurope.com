@@ -925,6 +925,24 @@
       "details": "http://start.gg/nrw-cup-major-2026",
       "slug": "nrwcup-2026",
       "id": "aH20UVm"
+    },
+    {
+      "banner": "NTZ2026/ntz2026-se-banner.webp",
+      "title": "No Tech Zone 2026",
+      "games": "Ultimate",
+      "description": "After last year's success this Ultimate Major in the heart of Milan, Italy is back for another iteration! The event has a space of 600 square meters, offers singles, doubles and ladder competitions and various side events. There's capacity for 300 competitors.",
+      "dates": [
+        "2026-05-16T00:00:00.000Z",
+        "2026-05-17T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Milan",
+        "country": "Italy"
+      },
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/9WdFD5eRZss?si=Sj-OEoEO1dYy-_6s",
+      "details": "https://www.start.gg/no-tech-zone-2026/",
+      "slug": "ntz-2026",
+      "id": "1Jw3CR2"
     }
   ]
 }
