@@ -963,6 +963,23 @@
       "id": "Ep1XFZE"
     },
     {
+      "banner": "Festa2026/festa_2026-se-banner.png",
+      "title": "Festa 2026",
+      "games": "Melee",
+      "description": "Follow up to a Melee experience unlike anything you've ever seen before 🌴 FESTA is back for its 5th year anniversary with another seven day event with the community in focus, packed with activities, gaming and relaxation. The venue? An island in the Stockholm archipelago. Caught your attention?",
+      "dates": [
+        "2026-08-09T00:00:00.000Z",
+        "2026-08-15T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Grinda",
+        "country": "Sweden"
+      },
+      "details": "https://www.start.gg/tournament/festa-2026/details",
+      "slug": "festa-2026",
+      "id": "00fefCQ"
+    },
+    {
       "banner": "Somnio8/somnio-8-se-banner.png",
       "title": "Somnio 8",
       "games": "Melee | Ultimate | \"Brawl\"",
