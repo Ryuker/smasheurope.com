@@ -6,7 +6,7 @@ export const GET: APIRoute = async ({ params, request }) => {
   console.log('Country Get request received');
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/countries';
+  const api_endpoint = 'http://localhost:5001/api/countries';
   const uri = `${api_endpoint}`;
   const response = await fetch(uri);
   const countriesData = await response.json();
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ params, request }) => {
   const newCountry = await request.json();
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/countries';
+  const api_endpoint = 'http://localhost:5001/api/countries';
   const uri = `${api_endpoint}`;
   const response = await fetch(uri, {
     method: 'POST',
@@ -60,7 +60,7 @@ export const POST: APIRoute = async ({ params, request }) => {
 //   }
   
 //   // Fetch the data from the external API
-//   const api_endpoint = 'http://localhost:5000/countries';
+//   const api_endpoint = 'http://localhost:5001/countries';
 //   const uri = `${api_endpoint}`;
 //   const response = await fetch(uri);
 //   const countriesData = await response.json();

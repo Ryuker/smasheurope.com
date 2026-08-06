@@ -6,7 +6,7 @@ export const GET: APIRoute = async ({ params, request }) => {
   console.log('Get request received');
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/events';
+  const api_endpoint = 'http://localhost:5001/api/events';
   const uri = `${api_endpoint}`;
   const response = await fetch(uri);
   const eventsData = await response.json();
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ params, request }) => {
   const newEvent = await request.json();
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/events';
+  const api_endpoint = 'http://localhost:5001/api/events';
   const uri = `${api_endpoint}`;
   const response = await fetch(uri, {
     method: 'POST',

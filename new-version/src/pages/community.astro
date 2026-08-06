@@ -17,7 +17,7 @@ console.log('inStaticMode: ', inStaticMode);
 let api_url;
 
 inStaticMode === "true" 
-	? api_url = new URL(`http://localhost:5000/api/countries`)
+	? api_url = new URL(`http://localhost:5001/api/countries`)
 	: api_url = new URL(`/api/countries`, Astro.url);
 
 const response = await fetch(api_url);

@@ -6,7 +6,7 @@ export const GET: APIRoute = async ({ params, request }) => {
   const eventId = params.eventId;
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/events';
+  const api_endpoint = 'http://localhost:5001/api/events';
   const uri = `${api_endpoint}/${eventId}`;
   const response = await fetch(uri);
 
@@ -41,7 +41,7 @@ export const PUT: APIRoute = async ({ params, request }) => {
   console.log(updatedEvent);
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/events';
+  const api_endpoint = 'http://localhost:5001/api/events';
   const uri = `${api_endpoint}/${eventId}`;
   const response = await fetch(uri, {
     method: 'PUT',
@@ -71,7 +71,7 @@ export const DELETE: APIRoute = async ({ params, request }) => {
   const eventId = params.eventId;
 
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/events';
+  const api_endpoint = 'http://localhost:5001/events';
   const uri = `${api_endpoint}/${eventId}`;
   const response = await fetch(uri, {
     method: 'DELETE'
@@ -99,7 +99,7 @@ export async function getStaticPaths() {
   }
   
   // Fetch the data from the external API
-  const api_endpoint = 'http://localhost:5000/api/events';
+  const api_endpoint = 'http://localhost:5001/api/events';
   const uri = `${api_endpoint}`;
   const response = await fetch(uri);
   const eventsData = await response.json();

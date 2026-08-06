@@ -12,7 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "server": "node --watch server/data/jsonServer.cjs --port 5000"
+    "server": "node --watch server/data/jsonServer.cjs --port 5001"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
