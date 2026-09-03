@@ -1,0 +1,101 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Tooltip from './Tooltip.astro';
+import type { late } from 'astro:schema';
+
+const { 
+  slug
+} = Astro.props;
+
+// Feth the circuit data
+const inStaticMode = await import.meta.env.STATIC_MODE;
+console.log('inStaticMode: ', inStaticMode);
+
+let api_url;
+
+inStaticMode === "true" ? api_url = new URL(`http://localhost:5001/api/circuits/`): api_url = new URL(`/api/circuits`, Astro.url);
+
+api_url = `${api_url}?slug=${slug}`;
+
+
+const response = await fetch(api_url);
+console.log(response);
+const data = await response.json();
+
+const circuitData = data;
+
+const circuit = circuitData[0];
+
+const game = "melee";
+
+
+// Get the emblem image from the circuit
+// const images = import.meta.glob<{ default: ImageMetadata }>('@assets/images/**/*.{jpeg,jpg,png,webp,svg}');
+
+// Load SVGs as raw text
+const svgs = import.meta.glob('@assets/images/**/*.svg', {
+  query: '?raw',
+  import: 'default'
+});
+
+const path = `/src/assets/images/initiatives/circuits/${game}/${circuit.imageFolderName}/${circuit.emblem}`;
+
+if (!svgs[path]) throw new Error(`"${path}" does not exist in glob`);
+
+let svgMarkup = await svgs[path]();
+
+// Remove intrinsic size so CSS can scale it
+svgMarkup = svgMarkup
+  .replace(/width="[^"]*"/, '')
+  .replace(/height="[^"]*"/, '');
+
+const hoverClasses = "filter group-hover:saturate-[130%] group-hover:opacity-80";
+
+
+---
+<div class="relative block px-2 py-3 rounded-lg flex justify-end items-center h-10 group">
+    
+    <a
+        target="_blank"
+        href={circuit.url}
+        id={`btn-circuit-${slug}`}
+        aria-describedby="tooltip"
+        class="absolute w-20 h-20 -bottom-2 rounded-fulal"
+    >
+        <!-- button content -->
+    </a>
+
+    <!-- <div class="absolute -bottom-2 right-0 h-20 w-40 pointer-events-none">
+        <div class="w-auto flex justify-end group">
+            <Image
+                src={images[path]()}
+                format="svg"
+                alt={`${circuit.name} emblem`}
+                class={`absolute -right-8 object-contain text-white ${hoverClasses}`}
+            />
+        </div>
+    </div> -->
+
+    <div class="absolute -bottom-2 right-2 h-20 w-40 pointer-events-none">
+        <div class="w-auto flex justify-end group">
+            <div class="absolute right-0 h-20 w-20 overflow-hidden text-black">
+                <div
+                    class={`${hoverClasses} h-full w-full [&>svg]:h-full [&>svg]:w-full`}
+                    set:html={svgMarkup}
+                />
+            </div>
+        </div>
+    </div>
+
+
+    <Tooltip text={`Part of ${circuit.name} circuit`} buttonId={`btn-circuit-${circuit.slug}`} />
+</div>
+
+
+
+
+
+
+
+

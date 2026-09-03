@@ -1,8 +1,11 @@
 ---
 import TestSafariModal from "@components/ui/test/TestSafariModal.astro";
 import MainLayout from "@layouts/MainLayout.astro";
+
+import EventFeedEmbed from "@components/EventFeedEmbed.astro";
 ---
 
 <MainLayout title="test">
-  <TestSafariModal />
+  <!-- <TestSafariModal /> -->
+  <EventFeedEmbed username="germanmelee.bsky.social" limit={5} />
 </MainLayout>

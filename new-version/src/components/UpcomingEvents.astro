@@ -8,6 +8,7 @@ console.log('inStaticMode: ', inStaticMode);
 
 let api_url;
 
+// Get Events
 inStaticMode === "true" ? api_url = new URL(`http://localhost:5001/api/events`): api_url = new URL(`/api/events`, Astro.url);
 
 const response = await fetch(api_url);

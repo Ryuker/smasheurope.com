@@ -1,0 +1,27 @@
+---
+import InitiativeCard from "./ui/InitiativeCard.astro"
+import LinkButton from './ui/LinkButton.astro';
+
+// images
+import CloudChasersLogo from '@assets/images/initiatives/circuits/melee/CloudChasers/cloud-chasers-logo.svg?raw';
+import Modal from './ui/Modal.astro';
+---
+
+<section>
+  <h2 class="text-xl md:text-3xl font-bold text-se-dark my-10 text-center ">
+    Ongoing community initiatives
+  </h2>
+  <div class="mx-auto grid grid-cols-1 gap-8 max-w-6xl">
+    <InitiativeCard title="Ready to aim for the sky?" svg={CloudChasersLogo} alt="Cloud Chasers Logo" columns={2}>
+      <Fragment slot="content">
+        <p>Earn points this Melee season by competing at European Melee tournaments including LENNIED 2, Somnio Noctem 2 and SAPF 3!</p>
+        <p>You can even win free flights to an North American major + a European tournament of choice!</p>
+      </Fragment>
+      <Fragment slot="buttons">
+        <div class="flex md:space-x-4 flex-wrap w-full gap-3 md:gap-0 justify-center mt-2">
+          <LinkButton icon="trophy" text="Learn more" url="https://start.gg/cceu" newTab={true} classes="flex gap-2 items-end"/>
+        </div>
+      </Fragment>
+    </InitiativeCard>
+  </div>
+</section>
