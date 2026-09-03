@@ -1,0 +1,19 @@
+{
+  "circuits": [
+    {
+        "ïd": "1",
+        "games": ["melee"],   
+        "name": "Cloud Chasers",
+        "url": "https://start.gg/cceu",
+        "imageFolderName":"CloudChasers",
+        "logo": "cloud-chasers-emblem.svg",
+        "emblem": "cloud-chasers-emblem.svg",
+        
+        "dates": [
+            "2026-09-07T00:00:00.000Z",
+            "2027-05-01T00:00:00.000Z"
+        ],
+        "slug": "cloud-chasers"
+    }
+  ]
+}

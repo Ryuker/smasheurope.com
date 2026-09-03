@@ -8,12 +8,18 @@ const middlewares = jsonServer.defaults();
 const events = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'events.json'), 'utf-8')
 );
+
+const circuits = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'circuits.json'), 'utf-8')
+);
+
 const countries = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'countries.json'), 'utf-8')
 );
 
 const db = {
   events: events.events,
+  circuits: circuits.circuits,
   countries: countries.countries,
 };
 
@@ -45,6 +51,9 @@ router.render = (req, res) => {
     
     writeData(path.join(__dirname, 'events.json'), {
       events: db.get('events').value(),
+    });
+    writeData(path.join(__dirname, 'circuits.json'), {
+      events: db.get('circuits').value(),
     });
     writeData(path.join(__dirname, 'countries.json'), {
       countries: db.get('countries').value(),
