@@ -1013,6 +1013,75 @@
       "details": "https://www.start.gg/ultimate-fighting-arena-2026-2",
       "slug": "ufa-2026",
       "id": "3dKLdEy"
+    },
+    {
+      "banner": "Lennied2/lennied-2-se-banner.webp",
+      "title": "Lennied: Fatta the Lan",
+      "games": "Melee",
+      "description": "Hosted in London's <a target=\"_blank\" href=\"https://www.redbull.com/gb-en/projects/gaming-sphere/\">Red Bull Gaming Sphere</a>, Lennied is back for another edition with regular competitions for Melee singles & doubles and Red Bull God's and Gatekeepers style crews. There's also a mystery game to compete in.",
+      "dates": [
+        "2026-10-03T00:00:00.000Z",
+        "2026-10-04T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "London",
+        "country": "England"
+      },
+      "circuits": [
+        {
+          "slug": "cloud-chasers"
+        }
+      ],
+      "trailerUrl": "https://www.youtube-nocookie.com/embed/1QAOrLnB2Gw?si=vQpX5B6A2ZdFGGiR",
+      "details": "https://www.start.gg/lennied-fatta-the-lan/",
+      "slug": "lennied-2",
+      "id": "uYLQR-0"
+    },
+    {
+      "banner": "SomnioNoctem2/somnio-noctem-2-se-banner.webp",
+      "title": "Somnio Noctem 2",
+      "games": "Melee | Ultimate | \"Brawl\" ",
+      "description": "The Somnio team is bringing another Major to the <a target=\"_blank\" href=\"https://h20.gg/en/\">H20 Esports Campus</a> in Purmerend (near Amsterdam). There's singles, doubles and 3 vs 3 crew competitions for Melee and Ultimate along with several other games to compete in and many exciting side events like a talent show 😶‍🌫️. There's no max capacity for this event.",
+      "dates": [
+        "2027-04-23T00:00:00.000Z",
+        "2027-04-25T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Purmerend",
+        "country": "Netherlands"
+      },
+      "circuits": [
+        {
+          "slug": "cloud-chasers"
+        }
+      ],
+      "details": "https://start.gg/noctem/",
+      "slug": "somnio-noctem-2",
+      "id": "nzcbk1_"
+    },
+    {
+      "banner": "SAPF3/sapf3-se-banner.webp",
+      "title": "SAPF 3",
+      "games": "Melee",
+      "description": "Germany's premier Melee major in Hannover is back. Over 800m² of venue space, loads of setups and even a restaurant directly inside the venue are available to provide a great time for up to 256 competitors per event! There's regular singles and doubles competitions accompanied by crews, smash sisters, ladder and a giant melee competition.",
+      "dates": [
+        "2027-04-23T00:00:00.000Z",
+        "2027-04-25T20:00:00.000Z"
+      ],
+      "location": {
+        "municipality": "Hannover",
+        "country": "Germany"
+      },
+      "circuits": [
+        {
+          "slug": "cloud-chasers"
+        }
+      ],
+      "trailerUrl": "https://www.youtube.com/embed/agKYXj3vdYc?si=OPdfU_lbdx091PgQ",
+      "details": "https://start.gg/sapf-3/",
+      "slug": "sapf-3",
+      "id": "DNPvo2y"
     }
+    
   ]
 }

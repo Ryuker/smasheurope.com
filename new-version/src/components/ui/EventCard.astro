@@ -124,7 +124,7 @@ const datesStr = `
           <div>
             <div class="overflow-visible">
               {event.circuits && event.circuits.map(circuit =>(
-                circuit.slug && <CircuitEmblem slug={circuit.slug}/>
+                circuit.slug && <CircuitEmblem slug={circuit.slug} eventSlug={event.slug} />
               ))}
             </div>
           </div>

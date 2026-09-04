@@ -53,7 +53,7 @@ router.render = (req, res) => {
       events: db.get('events').value(),
     });
     writeData(path.join(__dirname, 'circuits.json'), {
-      events: db.get('circuits').value(),
+      circuits: db.get('circuits').value(),
     });
     writeData(path.join(__dirname, 'countries.json'), {
       countries: db.get('countries').value(),

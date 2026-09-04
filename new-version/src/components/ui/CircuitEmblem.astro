@@ -4,7 +4,8 @@ import { Image } from 'astro:assets';
 import Tooltip from './Tooltip.astro';
 import type { late } from 'astro:schema';
 
-const { 
+const {
+  eventSlug,
   slug
 } = Astro.props;
 
@@ -20,7 +21,6 @@ api_url = `${api_url}?slug=${slug}`;
 
 
 const response = await fetch(api_url);
-console.log(response);
 const data = await response.json();
 
 const circuitData = data;
@@ -59,7 +59,7 @@ const hoverClasses = "filter group-hover:saturate-[130%] group-hover:opacity-80"
     <a
         target="_blank"
         href={circuit.url}
-        id={`btn-circuit-${slug}`}
+        id={`btn-${eventSlug}-circuit-${slug}`}
         aria-describedby="tooltip"
         class="absolute w-20 h-20 -bottom-2 rounded-fulal"
     >
@@ -89,7 +89,7 @@ const hoverClasses = "filter group-hover:saturate-[130%] group-hover:opacity-80"
     </div>
 
 
-    <Tooltip text={`Part of ${circuit.name} circuit`} buttonId={`btn-circuit-${circuit.slug}`} />
+    <Tooltip text={`Part of ${circuit.name} circuit`} buttonId={`btn-${eventSlug}-circuit-${circuit.slug}`} />
 </div>
 
 
