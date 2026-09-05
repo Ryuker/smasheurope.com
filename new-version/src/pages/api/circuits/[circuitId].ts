@@ -34,7 +34,7 @@ export const GET: APIRoute = async ({ params, request }) => {
 // PUT circuit handler, updates a circuit by ID at api_endpoint and returns the updated circuit
 export const PUT: APIRoute = async ({ params, request }) => {
   console.log('Put request received');
-  const circuitId = params.eventId;
+  const circuitId = params.circuitId;
   console.log(circuitId);
 
   const updatedCircuit = await request.json();
@@ -68,7 +68,7 @@ export const PUT: APIRoute = async ({ params, request }) => {
 // Delete circuit handler, deletes a circuit by ID from api_endpoint and returns a response
 export const DELETE: APIRoute = async ({ params, request }) => {
   console.log('Delete request received');
-  const circuitId = params.eventId;
+  const circuitId = params.circuitId;
 
   // Fetch the data from the external API
   const api_endpoint = 'http://localhost:5001/circuits';

@@ -1,7 +1,7 @@
 {
   "circuits": [
     {
-        "ïd": "1",
+        "id": "1",
         "games": ["melee"],   
         "name": "Cloud Chasers",
         "url": "https://start.gg/cceu",
