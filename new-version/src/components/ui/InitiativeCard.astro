@@ -21,7 +21,7 @@ const gridMap = {
 // Fallback safely to 4 columns if an unsupported number is passed
 const layoutClasses = gridMap[columns as keyof typeof gridMap] || gridMap[4];
 
-const isSvg = true;
+const isSvg = svg ? true : false;
 
 const imageClass = "flex lg:basis-full items-center py-2 object-none";
 ---
